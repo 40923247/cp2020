@@ -1,4 +1,5 @@
-<h1 contenteditable="true" data-element="title">IPv4 and IPv6 Addresses</h1>
+<h1>HW1</h1>
+<h2>IPv4 and IPv6 Addresses</h2>
 <p><span title="Quick scroll up">Overview</span></p>
 <p><span title="Quick scroll up"><span>In this lesson, we will discuss TCP/IP, and the two common types of Internet addressing: Internet protocol version 4 (IPv4) and Internet protocol version 6 (IPv6). We will discuss IPv4 in depth, as it is still the most dominant version in use in our networks. Then, we will cover the specifics of IPv6, differences between IPv4 and IPv6, and the reason we are moving toward IPv6 in the future.</span></span></p>
 <p><span title="Quick scroll up"><span>總覽</span></span></p>
@@ -24,4 +25,214 @@
 <p>將數據從一個網段移動到另一個網段時，網絡設備需要邏輯地址<span>-IPv4</span>或<span>IPv6</span>地址（請參見上圖中的網絡層）。正如我們在之前的模塊中討論的那樣，交換機做出明智的交換決策（請參見上圖中的數據鏈路層，基於媒體訪問控制（<span>MAC</span>）地址。<span>MAC</span>地址，也稱為物理地址，是唯一的硬編碼標識符）交換機使用這些<span>MAC</span>地址來識別哪些設備在哪個交換機端口上，然後根據這些地址將網段內的流量轉發到正確的端口。在網絡中，它需要路由器可以用來做出智能路由決定的邏輯地址。在大多數現代網絡中，這是通過使用<span>TCP / IP</span>尋址來完成的。<span> / SPX</span>）（用於<span>Novell</span>網絡），<span>AppleTalk</span>和用於<span>Microsoft</span>網絡的<span>NetBEUI</span>。<span>TCP/ IP</span>幾乎完全由於其魯棒性，可靠性和可用性而取代了這些協議。不可靠。</p>
 <p><span> </span></p>
 <p>儘管當今我們的大多數網絡仍使用<span>IPv4</span>，但許多網絡正在遷移到更新的<span>IPv6</span>尋址標準。此外，在過渡期間，許多網絡都對<span>IPv4</span>和<span>IPv6</span>提供雙重支持。進行此轉換的原因是我們用盡了有效的<span>IPv4</span>地址。<span> IPv4</span>使用<span>32</span>位尋址方案，僅提供<span>42</span>億個可用地址，而<span>IPv6</span>使用<span>128</span>位尋址方案。<span> IPv6</span>允許<span>2128</span>個地址或<span>340,282,366,920,938,000,000,000,000,000,000,000,000,000,000</span>（<span>3.4 x 1038</span>）個唯一<span>IP</span>地址。<span> IPv6</span>所允許的<span>IP</span>地址比人類所能利用的更多。至少這就是我們現在的想法。</p>
-<p><span title="Quick scroll up"><span></span></span></p>
+<h1>IPv4 Addressing</h1>
+<p><span>IPv4</span>尋址</p>
+<p><span>Addressing Notation</span></p>
+<p>尋址符號</p>
+<p><span>Internet protocol (IP) networking relies on both an IP address and subnet mask using a 32-bit dotted decimal notation. The Internet Engineering Task Force (IETF) and the Internet Corporation for Assigned Names and Numbers (ICANN) developed and maintains the standards for IP allocation and protocols.</span></p>
+<p><span> </span></p>
+<p><span>While the following IP address and subnet mask looks like a regular decimal number separated by periods:</span></p>
+<p><span>Internet</span>協議（<span>IP</span>）網絡使用<span>32</span>位點分十進製表示法同時依賴<span>IP</span>地址和子網掩碼。 互聯網工程任務組（<span>IETF</span>）和互聯網名稱與數字地址分配機構（<span>ICANN</span>）制定並維護了<span>IP</span>分配和協議的標準。</p>
+<p><span> </span></p>
+<p>以下<span>IP</span>地址和子網掩碼看起來像是一個普通的十進制數字，中間用句點分隔：</p>
+<table>
+<tbody>
+<tr>
+<td>
+<p>1</p>
+</td>
+<td>
+<p>168.1.1</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<table>
+<tbody>
+<tr>
+<td>
+<p>2</p>
+</td>
+<td>
+<p>255.255.255.0</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>The computer sees the binary:</p>
+<p>計算機看到二進製文件：</p>
+<table>
+<tbody>
+<tr>
+<td>
+<p>1</p>
+</td>
+<td>
+<p>11000000.10101000.00000001.00000001</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<table>
+<tbody>
+<tr>
+<td>
+<p>2</p>
+</td>
+<td>
+<p>11111111.11111111.11111111.00000000</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Each octet is made up of eight bits (one byte or two nibbles); multiplied by four octets, that equals 32 bits. The maximum value for any octet is 255 (28-1) so therefore the maximum number of IPv4 addresses available is 232, which equals 4,294,967,296 unique addresses.</p>
+<p> </p>
+<p>The presence of the subnet mask tells networking devices how much of the IP address belongs to the network and how much to the host. The 255.255.255.0 subnet represents that the first three octets are the network and the “0” represents the available number of hosts (nodes). So, the form is N.N.N.H. Think of the combination of IP and subnet as similar to regular postal addresses. You need a zip code (subnet) and street address (host).</p>
+<p> </p>
+<p>There are five different classes in IPv4 labelled A through E, with classes A, B, and C used by computer networks and classes D and E reserved as experimental. As originally designed, the IP range is determined by the lead bits in the first octet and matched to one specific subnet mask. This is called "classful" addressing. When the IP class does not match the default subnet mask, it is called "classless."</p>
+<p>每個八位位組由八位組成（一個字節或兩個半字節）。乘以四個八位位組，等於<span>32</span>位。任何八位位組的最大值為<span>255</span>（<span>28-1</span>），因此，可用的<span>IPv4</span>地址的最大數量為<span>232</span>，等於<span>4,294,967,296</span>個唯一地址。</p>
+<p> </p>
+<p>子網掩碼的存在告訴網絡設備多少<span>IP</span>地址屬於網絡，多少屬於主機。<span> 255.255.255.0</span>子網表示前三個八位位組是網絡，“<span> 0</span>”表示可用的主機（節點）數。因此，表格為<span>N.N.N.H.</span>可以將<span>IP</span>和子網的組合視為類似於常規郵政地址。您需要一個郵政編碼（子網）和街道地址（主機）。</p>
+<p> </p>
+<p>IPv4中有五種不同的類別，標記為<span>A</span>到<span>E</span>，計算機網絡使用的類別為<span>A</span>，<span>B</span>和<span>C</span>，<span>D</span>和<span>E</span>類別保留為實驗性。按照最初的設計，<span>IP</span>範圍由第一個八位位組中的前導位確定，並與一個特定的子網掩碼匹配。這稱為“有類”尋址。如果<span>IP</span>類與默認子網掩碼不匹配，則稱為“無類”。</p>
+<p> </p>
+<p>Network and Host Addresses</p>
+<p>網絡和主機地址</p>
+<p> </p>
+<p>An IPv4 network address is further divided into two portions based upon the subnet mask: the network portion and the host portion. A subnet mask is a series of numbers used for routing traffic within a subnetwork. When a subnet mask is used to define the network portion, anywhere there is a binary “11111111” (or 255 in decimal) used, this area is considered part of the network portion. When a binary “00000000” (0 in decimal) is used, this represents the host portion of the address. The host represents a single device on the network, such as your computer or phone.</p>
+<p> </p>
+<p>The following two tables show the network and host portions of IP addresses.</p>
+<p>IPv4網絡地址根據子網掩碼進一步分為兩部分：網絡部分和主機部分。 子網掩碼是用於在子網內路由流量的一系列數字。 當使用子網掩碼定義網絡部分時，在任何使用二進制“<span> 11111111</span>”（或十進制<span>255</span>）的地方，該區域均被視為網絡部分的一部分。 當使用二進制“<span> 00000000</span>”（十進制為<span>0</span>）時，它表示地址的主機部分。 主機代表網絡上的單個設備，例如您的計算機或電話。</p>
+<p> </p>
+<p>以下兩個表顯示了<span>IP</span>地址的網絡部分和主機部分。</p>
+<table>
+<thead>
+<tr>
+<td>
+<p><strong>IP address (in decimal)</strong></p>
+</td>
+<td>
+<p><strong>10</strong></p>
+</td>
+<td>
+<p><strong>1</strong></p>
+</td>
+<td>
+<p><strong>2</strong></p>
+</td>
+<td>
+<p><strong>3</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>IP address (in binary)</strong></p>
+</td>
+<td>
+<p><strong>00001010</strong></p>
+</td>
+<td>
+<p><strong>00000001</strong></p>
+</td>
+<td>
+<p><strong>00000010</strong></p>
+</td>
+<td>
+<p><strong>00000011</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Subnet mask (in decimal)</strong></p>
+</td>
+<td>
+<p><strong>255</strong></p>
+</td>
+<td>
+<p><strong>0</strong></p>
+</td>
+<td>
+<p><strong>0</strong></p>
+</td>
+<td>
+<p><strong>0</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Subnet mask (in binary)</strong></p>
+</td>
+<td>
+<p><strong>11111111</strong></p>
+</td>
+<td>
+<p><strong>00000000</strong></p>
+</td>
+<td>
+<p><strong>00000000</strong></p>
+</td>
+<td>
+<p><strong>00000000</strong></p>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<p><strong>Network bits</strong></p>
+</td>
+<td>
+<p><strong>Host bits</strong></p>
+</td>
+<td>
+<p><strong>Host bits</strong></p>
+</td>
+<td>
+<p><strong>Host bits</strong></p>
+<p><br/> </p>
+</td>
+</tr>
+</thead>
+</table>
+<p>In the example above, we see that our IP address is 10.1.2.3, and it has a class A subnet mask of 255.0.0.0. (We will discuss subnet classes in more detail later in this module). If this subnet mask is converted to binary, we see is written as eight 1s, followed by 24 0s, giving us 255.0.0.0 in decimal notation. Therefore, wherever we see a 255 in a subnet mask, we know we are seeing the network portion defined. So, for this example, our specific host is 10.1.2.3 and our network address would be 10.0.0.0.</p>
+<p>在上面的示例中，我們看到我們的<span>IP</span>地址為<span>10.1.2.3</span>，它的<span>A</span>類子網掩碼為<span>255.0.0.0</span>。 （在本模塊的後面，我們將更詳細地討論子網類）。 如果將此子網掩碼轉換為二進制，我們將看到它寫成八個<span>1</span>，然後是<span>24 0</span>，十進製表示為<span>255.0.0.0</span>。 因此，無論何時在子網掩碼中看到<span>255</span>，我們都知道看到了定義的網絡部分。 因此，對於此示例，我們的特定主機為<span>10.1.2.3</span>，我們的網絡地址為<span>10.0.0.0</span>。</p>
+<p> </p>
+<p>If a network has an IP address of 192.168.1.2, and the subnet mask of 255.255.255.0, we can identify the network and host portions of both addresses. To determine the network portion of the IP address, examine the subnet mask for which octets hold the value 255. In this case, the subnet mask has 255 in the first, second, and third octet. This means that the network portion of the IP address is the first, second, and third octet, as shown in the chart below. The remaining octet (the fourth octet) is the host portion of the address.</p>
+<table>
+<tbody>
+<tr>
+<td></td>
+<td>
+<p>Network Portion</p>
+</td>
+<td>
+<p>Host Portion</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>IP Address: 192.168.1.2</p>
+</td>
+<td>
+<p>192.168.1</p>
+</td>
+<td>
+<p>2</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Subnet Mask: 255.255.255.0</p>
+</td>
+<td>
+<p>255.255.255</p>
+</td>
+<td>
+<p>0</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h1>W10</h1>

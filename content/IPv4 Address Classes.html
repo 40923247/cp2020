@@ -133,8 +133,177 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content"> <a href='IPv4 and IPv6 Addresses.html'>Next</a> >> IPv4 and IPv6 Addresses<br /><h1>HW1 U13</h1>
-<br /> <a href='IPv4 and IPv6 Addresses.html'>Next</a> >> IPv4 and IPv6 Addresses</div>
+    <div id="tipue_search_content">IPv4 Addressing << <a href='IPv4 Addressing.html'>Previous</a> <a href='W10.html'>Next</a> >> W10<br /><h1>IPv4 Address Classes</h1>
+<p><span>IPv4</span>地址類別</p>
+<p><span>As you can see, when the subnet mask has a 255 in it, it is defining the network portion of the address. In class A addresses, the first octet defines the network, and the last three define the host. In class B addresses, the first two octets define the network, the last two define the host. In class C addresses, the first three octets define the network, the last one defines the host.</span></p>
+<p>如您所見，當子網掩碼中包含<span>255</span>時，它定義了地址的網絡部分。 在<span>A</span>類地址中，第一個八位位組定義網絡，最後三個八位位組定義主機。 在<span>B</span>類地址中，前兩個八位位組定義網絡，後兩個定義主機。 在<span>C</span>類地址中，前三個八位位組定義網絡，最後一個八位位組定義主機。</p>
+<p><img alt="" height="333" src="./../images/3.png" width="545"/></p>
+<p><span>Subnet class table. Image used under CC-BY license from Jason Dion.</span></p>
+<p><span> </span></p>
+<p>Subnet masks are used to define the specific network we are referencing. A standard class A subnet mask of 255.0.0.0 is used for all networks where the first octet starts with a number between 1 and 126. Recall from the subnet table below, our network was 10.0.0.0.</p>
+<p>子網掩碼用於定義我們要引用的特定網絡。 255.0.0.0的標準A類子網掩碼適用於所有第一個八位位組以1到126之間的數字開頭的網絡。從下面的子網表中調用，我們的網絡為10.0.0.0。</p>
+<table>
+<thead>
+<tr>
+<td>
+<p><strong>IP address (in decimal)</strong></p>
+</td>
+<td>
+<p><strong>10</strong></p>
+</td>
+<td>
+<p><strong>1</strong></p>
+</td>
+<td>
+<p><strong>2</strong></p>
+</td>
+<td>
+<p><strong>3</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>IP address (in binary)</strong></p>
+</td>
+<td>
+<p><strong>00001010</strong></p>
+</td>
+<td>
+<p><strong>00000001</strong></p>
+</td>
+<td>
+<p><strong>00000010</strong></p>
+</td>
+<td>
+<p><strong>00000011</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Subnet mask (in decimal)</strong></p>
+</td>
+<td>
+<p><strong>255</strong></p>
+</td>
+<td>
+<p><strong>0</strong></p>
+</td>
+<td>
+<p><strong>0</strong></p>
+</td>
+<td>
+<p><strong>0</strong></p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Subnet mask (in binary)</strong></p>
+</td>
+<td>
+<p><strong>11111111</strong></p>
+</td>
+<td>
+<p><strong>00000000</strong></p>
+</td>
+<td>
+<p><strong>00000000</strong></p>
+</td>
+<td>
+<p><strong>00000000</strong></p>
+</td>
+</tr>
+<tr>
+<td></td>
+<td>
+<p><strong>Network bits</strong></p>
+</td>
+<td>
+<p><strong>Host bits</strong></p>
+</td>
+<td>
+<p><strong>Host bits</strong></p>
+</td>
+<td>
+<p><strong>Host bits</strong></p>
+</td>
+</tr>
+</thead>
+</table>
+<p>Therefore, this address fits into the class A category. In this course, we only deal with “classful” subnet masks — the ones that only contain values of 255 and 0. In future courses, you may see other subnet masks used to further break apart the networks.</p>
+<p>因此，該地址屬於<span>A</span>類類別。 在本課程中，我們僅處理“有類”子網掩碼<span>-</span>僅包含<span>255</span>和<span>0</span>的值。在以後的課程中，您可能會看到用於進一步拆分網絡的其他子網掩碼。</p>
+<table>
+<thead>
+<tr>
+<td>
+<p><strong>Address Class</strong></p>
+</td>
+<td>
+<p><strong>Value in First Octet</strong></p>
+</td>
+<td>
+<p><strong>Classful Mask (Dotted Decimal)</strong></p>
+</td>
+<td>
+<p><strong>Classful Mask (Prefix Notation)</strong></p>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<p>Class A</p>
+</td>
+<td>
+<p>1 – 126</p>
+</td>
+<td>
+<p>255.0.0.0</p>
+</td>
+<td>
+<p>/8</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Class B</p>
+</td>
+<td>
+<p>128 – 191</p>
+</td>
+<td>
+<p>255.255.0.0</p>
+</td>
+<td>
+<p>/16</p>
+</td>
+</tr>
+<tr>
+<td>
+<p>Class C</p>
+</td>
+<td>
+<p>192 – 223</p>
+</td>
+<td>
+<p>255.255.255.0</p>
+</td>
+<td>
+<p>/24</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span>As you can see in the address classes table, class A references networks with the first octet having a value of 1-126, class B references 128-191, class C references 192-223. There is also a special address called the loopback address, which is 127.0.0.1. The entire range of 127.x.x.x is reserved to support this loopback address. A loopback address is an IP reserved to reference the computer on which you are currently working. Every computer knows to answer up for itself when a reference to 127.0.0.1 is given. This is also known as as the “localhost.”</span></p>
+<p><span> </span></p>
+<p><span>To route your traffic over the Internet, you are required to have a publically routable IP address. These addresses are globally managed by the Internet Corporation for Assigned Names and Numbers (ICANN). If you desire to have one of these addresses, you must purchase them for use to ensure no one else has that specific number. For most users, this is done for you by your Internet service provider (ISP), but if you have a need for numerous public IP addresses, you can buy a block of them from ICANN.</span></p>
+<p><span> </span></p>
+<p><span>Private IP addresses, on the other hand, can be used by anyone without any prior coordination. This is because private IP addresses are not routable over the Internet and are only used inside your local area network. For example, at your home, you may have five computers hooked up to your switch and those machines are all using private IP addresses. When you make a request to go outside the network, like to visit a college’s website, your router performs a network address translation (NAT) that allows your private IP address to be converted into a public IP address and a port, which then makes the request on your behalf. There is a specific range of IP addresses that are reserved as private for internal use (by you and others).</span></p>
+<p>如您在地址類別表中看到的，類別<span>A</span>引用第一個八位位組的值是<span>1-126</span>的網絡，類別<span>B</span>引用<span>128-191</span>，類別<span>C</span>引用<span>192-223</span>。還有一個稱為回送地址的特殊地址，即<span>127.0.0.1</span>。保留<span>127.x.x.x</span>的整個範圍以支持此回送地址。回送地址是保留的<span>IP</span>，用於引用您當前正在使用的計算機。當給出對<span>127.0.0.1</span>的引用時，每台計算機都知道會自己回答。這也稱為“本地主機”。</p>
+<p><span> </span></p>
+<p>要通過<span>Internet</span>路由流量，您需要具有可公共路由的<span>IP</span>地址。這些地址由互聯網名稱與數字地址分配機構（<span>ICANN</span>）全局管理。如果您希望擁有這些地址之一，則必須購買它們以確保沒有其他人擁有該特定號碼。對於大多數用戶而言，這是由<span>Internet</span>服務提供商（<span>ISP</span>）為您完成的，但是如果您需要大量的公共<span>IP</span>地址，則可以從<span>ICANN</span>購買其中的一部分。</p>
+<p><span> </span></p>
+<p>另一方面，任何人都可以使用私有<span>IP</span>地址，而無需事先協調。這是因為專用<span>IP</span>地址無法通過<span>Internet</span>路由，而只能在局域網內使用。例如，在家裡，您可能有五台計算機連接到交換機，而這些計算機都使用私有<span>IP</span>地址。當您發出訪問網絡的請求（例如訪問大學的網站）時，路由器會執行網絡地址轉換（<span>NAT</span>），該轉換可將您的私有<span>IP</span>地址轉換為公共<span>IP</span>地址和端口，從而使代表您提出要求。有一個特定範圍的<span>IP</span>地址保留為私有（供您和他人使用）供內部使用。</p>
+<br />IPv4 Addressing << <a href='IPv4 Addressing.html'>Previous</a> <a href='W10.html'>Next</a> >> W10</div>
         
     <!-- footer -->
       <div class="container">

@@ -1,5 +1,6 @@
 <h1>HW1</h1>
-<h2>IPv4 and IPv6 Addresses</h2>
+<h2>U13</h2>
+<h3>IPv4 and IPv6 Addresses</h3>
 <p><span title="Quick scroll up">Overview</span></p>
 <p><span title="Quick scroll up"><span>In this lesson, we will discuss TCP/IP, and the two common types of Internet addressing: Internet protocol version 4 (IPv4) and Internet protocol version 6 (IPv6). We will discuss IPv4 in depth, as it is still the most dominant version in use in our networks. Then, we will cover the specifics of IPv6, differences between IPv4 and IPv6, and the reason we are moving toward IPv6 in the future.</span></span></p>
 <p><span title="Quick scroll up"><span>總覽</span></span></p>
@@ -25,7 +26,7 @@
 <p>將數據從一個網段移動到另一個網段時，網絡設備需要邏輯地址<span>-IPv4</span>或<span>IPv6</span>地址（請參見上圖中的網絡層）。正如我們在之前的模塊中討論的那樣，交換機做出明智的交換決策（請參見上圖中的數據鏈路層，基於媒體訪問控制（<span>MAC</span>）地址。<span>MAC</span>地址，也稱為物理地址，是唯一的硬編碼標識符）交換機使用這些<span>MAC</span>地址來識別哪些設備在哪個交換機端口上，然後根據這些地址將網段內的流量轉發到正確的端口。在網絡中，它需要路由器可以用來做出智能路由決定的邏輯地址。在大多數現代網絡中，這是通過使用<span>TCP / IP</span>尋址來完成的。<span> / SPX</span>）（用於<span>Novell</span>網絡），<span>AppleTalk</span>和用於<span>Microsoft</span>網絡的<span>NetBEUI</span>。<span>TCP/ IP</span>幾乎完全由於其魯棒性，可靠性和可用性而取代了這些協議。不可靠。</p>
 <p><span> </span></p>
 <p>儘管當今我們的大多數網絡仍使用<span>IPv4</span>，但許多網絡正在遷移到更新的<span>IPv6</span>尋址標準。此外，在過渡期間，許多網絡都對<span>IPv4</span>和<span>IPv6</span>提供雙重支持。進行此轉換的原因是我們用盡了有效的<span>IPv4</span>地址。<span> IPv4</span>使用<span>32</span>位尋址方案，僅提供<span>42</span>億個可用地址，而<span>IPv6</span>使用<span>128</span>位尋址方案。<span> IPv6</span>允許<span>2128</span>個地址或<span>340,282,366,920,938,000,000,000,000,000,000,000,000,000,000</span>（<span>3.4 x 1038</span>）個唯一<span>IP</span>地址。<span> IPv6</span>所允許的<span>IP</span>地址比人類所能利用的更多。至少這就是我們現在的想法。</p>
-<h2>IPv4 Addressing</h2>
+<h3>IPv4 Addressing</h3>
 <p><span>IPv4</span>尋址</p>
 <p><span>Addressing Notation</span></p>
 <p>尋址符號</p>
@@ -234,7 +235,7 @@
 </tr>
 </tbody>
 </table>
-<h2>IPv4 Address Classes</h2>
+<h3>IPv4 Address Classes</h3>
 <p><span>IPv4</span>地址類別</p>
 <p><span>As you can see, when the subnet mask has a 255 in it, it is defining the network portion of the address. In class A addresses, the first octet defines the network, and the last three define the host. In class B addresses, the first two octets define the network, the last two define the host. In class C addresses, the first three octets define the network, the last one defines the host.</span></p>
 <p>如您所見，當子網掩碼中包含<span>255</span>時，它定義了地址的網絡部分。 在<span>A</span>類地址中，第一個八位位組定義網絡，最後三個八位位組定義主機。 在<span>B</span>類地址中，前兩個八位位組定義網絡，後兩個定義主機。 在<span>C</span>類地址中，前三個八位位組定義網絡，最後一個八位位組定義主機。</p>
@@ -400,8 +401,255 @@
 <p><span> </span></p>
 <p><span>Private IP addresses, on the other hand, can be used by anyone without any prior coordination. This is because private IP addresses are not routable over the Internet and are only used inside your local area network. For example, at your home, you may have five computers hooked up to your switch and those machines are all using private IP addresses. When you make a request to go outside the network, like to visit a college’s website, your router performs a network address translation (NAT) that allows your private IP address to be converted into a public IP address and a port, which then makes the request on your behalf. There is a specific range of IP addresses that are reserved as private for internal use (by you and others).</span></p>
 <p>如您在地址類別表中看到的，類別<span>A</span>引用第一個八位位組的值是<span>1-126</span>的網絡，類別<span>B</span>引用<span>128-191</span>，類別<span>C</span>引用<span>192-223</span>。還有一個稱為回送地址的特殊地址，即<span>127.0.0.1</span>。保留<span>127.x.x.x</span>的整個範圍以支持此回送地址。回送地址是保留的<span>IP</span>，用於引用您當前正在使用的計算機。當給出對<span>127.0.0.1</span>的引用時，每台計算機都知道會自己回答。這也稱為“本地主機”。</p>
-<p><span> </span></p>
 <p>要通過<span>Internet</span>路由流量，您需要具有可公共路由的<span>IP</span>地址。這些地址由互聯網名稱與數字地址分配機構（<span>ICANN</span>）全局管理。如果您希望擁有這些地址之一，則必須購買它們以確保沒有其他人擁有該特定號碼。對於大多數用戶而言，這是由<span>Internet</span>服務提供商（<span>ISP</span>）為您完成的，但是如果您需要大量的公共<span>IP</span>地址，則可以從<span>ICANN</span>購買其中的一部分。</p>
 <p><span> </span></p>
 <p>另一方面，任何人都可以使用私有<span>IP</span>地址，而無需事先協調。這是因為專用<span>IP</span>地址無法通過<span>Internet</span>路由，而只能在局域網內使用。例如，在家裡，您可能有五台計算機連接到交換機，而這些計算機都使用私有<span>IP</span>地址。當您發出訪問網絡的請求（例如訪問大學的網站）時，路由器會執行網絡地址轉換（<span>NAT</span>），該轉換可將您的私有<span>IP</span>地址轉換為公共<span>IP</span>地址和端口，從而使代表您提出要求。有一個特定範圍的<span>IP</span>地址保留為私有（供您和他人使用）供內部使用。</p>
-<h1>W10</h1>
+<h3>Assigning an IP Address 分配IP地址</h3>
+<p>There are four components that make up a properly configured IPv4 network client: IP address, subnet mask, default gateway, and domain name system (DNS) IP address.</p>
+<p> </p>
+<p>The first component of a properly configured IPv4 network client is the IP address. This is the logical name assigned to that particular host. In the image below, you can see that the host is assigned 200.200.200.5. No other device on the network can have this exact IP address or conflicts will occur. This IP address is like the device’s first name: no one else in its family (or network in this case) can have this IP address.</p>
+<p>正確配置<span>IPv4</span>網絡客戶端的過程由四個部分組成：<span>IP</span>地址，子網掩碼，默認網關和域名系統（<span>DNS</span>）<span>IP</span>地址。</p>
+<p>正確配置的<span>IPv4</span>網絡客戶端的第一部分是<span>IP</span>地址。 這是分配給該特定主機的邏輯名稱。 在下圖中，您可以看到為主機分配了<span>200.200.200.5</span>。 網絡上的任何其他設備都不能具有此確切的<span>IP</span>地址，否則會發生衝突。 該<span>IP</span>地址就像設備的名字一樣：其係列（在這種情況下為網絡）中沒有其他人可以使用此<span>IP</span>地址。</p>
+<p><img alt="" height="399" src="/images/4.png" width="354"/></p>
+<p>Internet protocol (TCP/IP) properties window. Image used under CC-BY license from <a href="http://www.jasondion.com/">Jason Dion</a>.</p>
+<p>The second component of a properly configured IPv4 network client is the subnet mask. The subnet mask is required to ensure that the host knows what other IP addresses are on its network (which is defined by the subnet mask). In this example, the default class C subnet mask was used, which is 255.255.255.0. This tells the client that its host’s IP address resides on the 200.200.200.0 network, so other IPs in the 200.200.200.x range will be in the same subnet.</p>
+<p> </p>
+<p>The third component of a properly configured IPv4 network client is the default gateway. This is the IP address of the device (normally a router) that connects this particular network to another network. For example, if our host wants to talk to someone outside of the 200.200.200.0 network, it would send the message to this default gateway (200.200.200.10 in our example), and this device will forward that request outside of the network.</p>
+<p> </p>
+<p>The final component of a properly configured IPv4 network client is the DNS server IP address, or WINS server IP. The DNS server is the domain name system server, and is responsible for converting domain names into IP addresses for the host. For example, if you wanted to go to www.google.com, your host doesn’t know where that is, but the DNS server does know the location. Providing your host with the DNS server address allows it to send the request to the DNS server, which will convert the name into an IP address, and send that address back to the requesting host, which can then go to that IP address with the request. A WINS server is like a DNS server, but is specific to Windows NetBIOS computer names and IP addresses. WINS is usually used inside a Windows network, while DNS is used for clients on the Internet.</p>
+<p>正確配置的<span>IPv4</span>網絡客戶端的第二個組件是子網掩碼。需要子網掩碼以確保主機知道其網絡上還有哪些其他<span>IP</span>地址（由子網掩碼定義）。在此示例中，使用了默認的<span>C</span>類子網掩碼，即<span>255.255.255.0</span>。這告訴客戶端，其主機的<span>IP</span>地址位於<span>200.200.200.0</span>網絡上，因此<span>200.200.200.x</span>範圍內的其他<span>IP</span>將位於同一子網中。</p>
+<p>正確配置的<span>IPv4</span>網絡客戶端的第三個組件是默認網關。這是將該特定網絡連接到另一個網絡的設備（通常是路由器）的<span>IP</span>地址。例如，如果我們的主機希望與<span>200.200.200.0</span>網絡外部的某人交談，則它將消息發送到該默認網關（在我們的示例中為<span>200.200.200.10</span>），並且該設備將把該請求轉發到網絡外部。</p>
+<p>正確配置的<span>IPv4</span>網絡客戶端的最後一個組件是<span>DNS</span>服務器<span>IP</span>地址或<span>WINS</span>服務器<span>IP</span>。<span> DNS</span>服務器是域名系統服務器，並負責將域名轉換為主機的<span>IP</span>地址。例如，如果您想訪問<span>www.google.com</span>，則您的主機不知道該地址在哪裡，但是<span>DNS</span>服務器確實知道該位置。為您的主機提供<span>DNS</span>服務器地址可以使其向<span>DNS</span>服務器發送請求，<span>DNS</span>服務器會將名稱轉換為<span>IP</span>地址，然後將該地址發送回請求主機，然後主機可以隨請求轉到該<span>IP</span>地址。<span> WINS</span>服務器類似於<span>DNS</span>服務器，但特定於<span>Windows NetBIOS</span>計算機名稱和<span>IP</span>地址。<span> WINS</span>通常在<span>Windows</span>網絡內部使用，而<span>DNS</span>用於<span>Internet</span>上的客戶端。</p>
+<p>IP addresses are assigned to a client or workstation using either static or dynamic configuration. In static configuration, we find a simple method for assigning an address, but it is more time-consuming. This method requires the technician to input the four required pieces of information that make up an address (IP address, subnet mask, default gateway, and DNS server IP address). This is prone to human errors, since a single, mistyped digit will cause the device to be unable to connect to the network. Also, because each client has to be configured individually and no repeating of IP addresses is allowed, this requires detailed documentation of the used IP addresses and becomes impractical for large networks very quickly.</p>
+<p>Dynamic configuration is much quicker and easier. There are two dynamic configuration methods: DHCP and BOOTP. Dynamic host configuration protocol (DHCP) is simple for large networks and less confusing, because a server handles the assignment of the IP addresses for the client, as well as the subnet mask, default gateway, and DNS server. In practice, the network administrator simply provides the DHCP server with a range of IP addresses to hand out, and the DHCP server does all the work for the network administrator. The DHCP server gives a client an IP address and the associated parameters, as well as a “lease time.” The lease time is the specific amount of time the client is allowed to use that IP address. When the lease is nearing the end of its term, the DHCP server gives the client the option of keeping the lease longer (if it is still using it), or the server can take the lease back to reuse (if it cannot get in touch with the client at the lease renewal). Most large-scale networks and most home networks use DHCP for configuration.</p>
+<p>Bootstrap protocol, more commonly referred to as BOOTP, is an older dynamic addressing protocol and only assigns IP addresses, subnet masks, and default gateways. BOOTP doesn’t support providing DNS server information or WINS server information. BOOTP is considered obsolete now, as it has been replaced by DHCP. DHCP, on the other hand, is based upon the legacy BOOTP protocol but added DNS, WINS and other variables that are related to newer standards like voice-over IP. If your network is dynamically configured, DHCP is most likely in use.</p>
+<p>IP地址使用靜態或動態配置分配給客戶端或工作站。在靜態配置中，我們找到了一種分配地址的簡單方法，但是這比較耗時。此方法要求技術人員輸入組成地址（<span>IP</span>地址，子網掩碼，默認網關和<span>DNS</span>服務器<span>IP</span>地址）的四個必需信息。這很容易發生人為錯誤，因為單個錯誤鍵入的數字將導致設備無法連接到網絡。另外，由於必須分別配置每個客戶端，並且不允許重複<span>IP</span>地址，因此這需要使用的<span>IP</span>地址的詳細文檔，並且對於大型網絡來說非常不切實際。</p>
+<p>動態配置更快，更容易。動態配置方法有兩種：<span>DHCP</span>和<span>BOOTP</span>。動態主機配置協議（<span>DHCP</span>）對於大型網絡來說很簡單，並且不易混淆，因為服務器可以處理客戶端<span>IP</span>地址的分配以及子網掩碼，默認網關和<span>DNS</span>服務器。實際上，網絡管理員只需為<span>DHCP</span>服務器提供一系列<span>IP</span>地址即可分發，而<span>DHCP</span>服務器將為網絡管理員完成所有工作。<span> DHCP</span>服務器為客戶端提供<span>IP</span>地址和關聯的參數，以及“租用時間”。租用時間是允許客戶端使用該<span>IP</span>地址的特定時間。當租約即將到期時，<span>DHCP</span>服務器會為客戶端提供延長租約（如果仍在使用租約）的選項，或者服務器可以將租約重新使用（如果無法聯繫）與客戶續約）。大多數大型網絡和大多數家庭網絡都使用<span>DHCP</span>進行配置。</p>
+<p>Bootstrap協議（通常稱為<span>BOOTP</span>）是一種較舊的動態尋址協議，僅分配<span>IP</span>地址，子網掩碼和默認網關。<span> BOOTP</span>不支持提供<span>DNS</span>服務器信息或<span>WINS</span>服務器信息。<span> BOOTP</span>現在已被淘汰，因為它已被<span>DHCP</span>取代。另一方面，<span>DHCP</span>基於舊式<span>BOOTP</span>協議，但增加了<span>DNS</span>，<span>WINS</span>和其他與諸如語音<span>IP</span>之類的新標準相關的變量。如果您的網絡是動態配置的，則最有可能使用<span>DHCP</span>。</p>
+<h3>IPv6</h3>
+<p>Internet protocol version 6 was developed to provide more public IP addresses, because the IPv4 public addressing space was running out as a result of the proliferation of network devices in our lives. Now, our cellphones, laptops, tablets, thermostats, refrigerators, TVs, and more are all being connected to the network and they all need IP addresses. Due to the 32-bit addresses used by IPv4, we were limited to 4.2 billion IP addresses, but by increasing the address space to 128-bit addresses in IPv6, the number of IP addresses available has increased to 340 undecillion addresses. This is 5 x 1028 IPv6 addresses for every person on the planet, including children.</p>
+<p>IPv5 was designed, but eventually skipped in implementation, because it was only a 64-bit address and some feared it didn’t provide a large enough pool of available IP addresses. This experimental protocol was abandoned, but many of its concepts were incorporated into the IPv6 protocol, as well as some other protocols.</p>
+<p>Internet協議版本<span>6</span>的開發是為了提供更多的公共<span>IP</span>地址，因為由於我們生活中網絡設備的激增，<span>IPv4</span>公共尋址空間已耗盡。 現在，我們的手機，筆記本電腦，平板電腦，恆溫器，冰箱，電視等已全部連接到網絡，並且它們都需要<span>IP</span>地址。 由於<span>IPv4</span>使用<span>32</span>位地址，因此我們只能使用<span>42</span>億個<span>IP</span>地址，但是通過將地址空間增加到<span>IPv6</span>中的<span>128</span>位地址，可用的<span>IP</span>地址數量已增加到<span>340</span>個十億位地址。 這是地球上每個人（包括孩子）的<span>5 x 1028 IPv6</span>地址。</p>
+<p>IPv5是經過設計的，但最終被跳過，因為它只是一個<span>64</span>位地址，並且有人擔心它不能提供足夠大的可用<span>IP</span>地址池。 該實驗性協議已被放棄，但其許多概念以及其他一些協議已合併到<span>IPv6</span>協議中。</p>
+<table width="557">
+<tbody>
+<tr>
+<td width="75"></td>
+<td colspan="2" width="478">
+<p>Number of Addresses</p>
+</td>
+</tr>
+<tr>
+<td width="75">
+<p>IPv4</p>
+</td>
+<td width="17">
+<p>2<sup>32</sup></p>
+</td>
+<td>
+<p>4,294,967,296</p>
+</td>
+</tr>
+<tr>
+<td width="75">
+<p>IPv6</p>
+</td>
+<td width="17">
+<p>2<sup>128</sup></p>
+</td>
+<td>
+<p>340,282,366,920,938,000,000,000,000,000,000,000,000</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>Benefits of IPv6 IPv6的好處</p>
+<p></p>
+<p>IPv6 has many benefits over IPv4, the biggest of which is the number of available IP addresses. In IPv6, there is no broadcast provided, which frees up IP addresses, reduces the amount of traffic sent over the network, and increases bandwidth. Also, IPv6 doesn’t allow packets to be fragmented (broken into pieces) during transmission. This is handled by the protocol by resizing the maximum transmission unit size each time a session is created between two devices.</p>
+<p>A major benefit of IPv6 is that it allows for dual stack implementation, which means that IPv4 and IPv6 can run simultaneously on a device and provide service to the device from either protocol without conflict. IPv6 can also run on top of IPv4 as a tunneled protocol, thereby allowing it to run over older devices, as well.</p>
+<p>Lastly, the packet headers in IPv6 are much simpler than in IPv4. In IPv4, there are 12 fields that must be completely filled out (adding to overhead and complexity), but in IPv6 this was reduced to the bare minimum of five fields. This includes fields such as source and destination address, as well as quality of service priority.</p>
+<p>與<span>IPv4</span>相比，<span>IPv6</span>有很多好處，其中最大的好處就是可用<span>IP</span>地址的數量。在<span>IPv6</span>中，沒有提供廣播，這釋放了<span>IP</span>地址，減少了通過網絡發送的流量，並增加了帶寬。另外，<span>IPv6</span>不允許在傳輸過程中將數據包分段（分成碎片）。協議通過每次在兩個設備之間創建會話時調整最大傳輸單元大小來解決此問題。</p>
+<p>IPv6的主要優點在於它允許雙協議棧實現，這意味著<span>IPv4</span>和<span>IPv6</span>可以在設備上同時運行，並可以從任一協議向設備提供服務而不會發生衝突。<span> IPv6</span>還可以作為隧道協議在<span>IPv4</span>之上運行，從而也可以在較舊的設備上運行。</p>
+<p>最後，<span>IPv6</span>中的數據包頭比<span>IPv4</span>中的數據包頭簡單得多。在<span>IPv4</span>中，必須完全填寫<span>12</span>個字段（增加了開銷和復雜性），但是在<span>IPv6</span>中，此字段減少到最少五個字段。這包括諸如源地址和目標地址以及服務質量優先級之類的字段。</p>
+<p></p>
+<p>IPv6 Address Structure IPv6地址結構</p>
+<p>While IPv6 has numerous improvements over IPv4, the most notable thing about IPv6 that people see is the format of the address. Instead of the dotted-decimal notation we used in IPv4 with addresses like 192.168.1.1, IPv6 uses eight groupings of four hexadecimal digits in each group. Each group is then broken apart by a colon (:). An example of an IPv6 address is 2002:0000:0000:0000:0000:0000:4815:54ae.</p>
+<p>A hexadecimal digit allows for counting from zero to 15 using the digits 0-9, then the letters A through F. Each hexadecimal digit replaces four binary digits (or four 1s and 0s), allowing us to write an IPv6 address using (at most) 32 hexadecimal digits.</p>
+<p>Luckily, the creators of IPv6 allowed for a shorthand. First, anytime there are leading zeros, they can be dropped. This is equivalent to dropping the leading zeros in the number 0010 to 10. The numbers are equivalent, as long as the zeros are in front of the other digits. The second shorthand technique involves several groupings of four zeros. When multiple groupings of four zeros are present, they can be represented by a double colon (::). Note that you can only use the double colon once per address, because the only way to know how many sets of zeros you’ve replaced with the double colon is to compare the shorthand address with the total number of bits available.</p>
+<p>儘管<span>IPv6</span>相對於<span>IPv4</span>進行了許多改進，但是人們看到的關於<span>IPv6</span>的最值得注意的事情是地址的格式。<span> IPv6</span>不是在<span>IPv4</span>中使用像<span>192.168.1.1</span>這樣的地址使用的點分十進製表示法，而是在每個組中使用四個十六進制數字組成的八組。然後，每個組用冒號（<span>:)</span>分隔。<span> IPv6</span>地址的示例是<span>2002</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>4815</span>：<span>54ae</span>。</p>
+<p>十六進制數字允許使用數字<span>0-9</span>從<span>0</span>到<span>15</span>進行計數，然後使用字母<span>A</span>到<span>F</span>。每個十六進制數字都替換了四個二進制數字（或四個<span>1</span>和<span>0</span>），從而允許我們使用（最多為）<span>32</span>個十六進制數字。</p>
+<p>幸運的是，<span>IPv6</span>的創建者允許使用簡寫形式。首先，只要有前導零，就可以將其丟棄。這等效於將數字<span>0010</span>中的前導零刪除為<span>10</span>。這些數字是等效的，只要零在其他數字的前面即可。第二種速記技術涉及四個零的幾個分組。當存在四個零的多個分組時，可以用雙冒號（：<span>:)</span>表示。請注意，每個地址只能使用雙冒號一次，因為要知道用雙冒號替換了多少個零集的唯一方法是將速記地址與可用位數進行比較。</p>
+<p></p>
+<p>EXAMPLE</p>
+<p>2002:0000:0000:0000:0000:0000:0000:4815:54ae can be rewritten. One way to rewrite this address is to eliminate the leading zeros.</p>
+<p>2002：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>4815</span>：<span>54ae</span>可以重寫。 重寫此地址的一種方法是消除前導零。</p>
+<p><img alt="" height="148" src="/images/5.png" width="569"/></p>
+<p>By eliminating the leading zeros, 2002:0000:0000:0000:0000:0000:0000:4815:54ae becomes 2002:0:0:0:0:0:0:4815:54ae.</p>
+<p>Alternatively, this address can be rewritten using a double colon (::) in place of a multiple grouping of four 0s.</p>
+<p>通過消除前導零，<span>2002</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>4815</span>：<span>54ae</span>變為<span>2002</span>：<span>0</span>：<span>0</span>：<span>0</span>：<span>0</span>：<span>0</span>：<span>0</span>：<span>0</span>：<span>4815</span>：<span>54ae</span>。</p>
+<p>或者，可以使用雙冒號（：<span>:)</span>代替四個<span>0</span>的多個分組來重寫此地址。</p>
+<p><img alt="" height="146" src="/images/6.png" width="545"/></p>
+<p>By replacing multiple groupings of four 0s with a double colon, 2002:0000:0000:0000:0000:0000:0000:4815:54ae becomes 2002::4815:54ae.</p>
+<p>通過用雙冒號替換四個<span>0</span>的多個分組，<span>2002</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>4815</span>：<span>54ae</span>變為<span>2002 :: 4815</span>：<span>54ae</span>。</p>
+<p></p>
+<p><span>EXAMPLE</span></p>
+<p>2009:0123:4040:0000:0000:0000:000A:100B can be written by both eliminating leading zeros and using double colons.</p>
+<p>可以通過消除前導零和使用雙冒號來編寫<span>2009</span>：<span>0123</span>：<span>4040</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>000A</span>：<span>100B</span>。</p>
+<p><img alt="" height="149" src="/images/7.png" width="546"/></p>
+<p>2009:0123:4040:0000:0000:0000:000A:100B becomes 2009:123:4040::A:100B.</p>
+<p>As you can see, the IPv6 addresses are more complex than their IPv4 counterparts, but over time, you will get used to seeing how they are written, and what the different notation indicates.</p>
+<p>2009：<span>0123</span>：<span>4040</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>000A</span>：<span>100B</span>變為<span>2009</span>：<span>123</span>：<span>4040 :: A</span>：<span>100B</span></p>
+<p>如您所見，<span>IPv6</span>地址比其對應的<span>IPv4</span>地址要復雜得多，但是隨著時間的流逝，您將習慣於看到它們的寫法以及不同符號的含義。</p>
+<p>IPv6 Data Flows IPv6資料流向圖</p>
+<p>Data flows in IPv6 are similar to those in IPv4. In fact, unicast and multicast work identical to their IPv4 counterparts. But, because there is no broadcast in IPv6, it has been replaced with “anycast.” Anycast allows data to travel from a single source device to the nearest of multiple, but specific, devices on a network. Anycasting is designed to let one host initiate the efficient updating of router tables for a group of hosts. IPv6 can determine which gateway host is closest and sends the packets to that host as though it were a unicast communication. In turn, that host can anycast to another host in the group until all routing tables are updated.</p>
+<p>IPv6中的數據流類似於<span>IPv4</span>中的數據流。 實際上，單播和多播的工作方式與<span>IPv4</span>相同。 但是，由於<span>IPv6</span>中沒有廣播，因此已將其替換為“任何廣播”。<span> Anycast</span>允許數據從單個源設備傳輸到網絡上多個（但特定的）設備中最接近的一個。 任意廣播旨在讓一個主機為一組主機啟動路由器表的有效更新。<span> IPv6</span>可以確定哪個網關主機最接近，並將數據包發送到該主機，就好像它是單播通信一樣。 相應地，該主機可以向組中的另一台主機任意廣播，直到更新所有路由表為止。</p>
+<h3>Classful Vs  Classless Addressing  Subnet and CIDR</h3>
+<p>相對於 無類尋址：子網和<span>CIDR</span></p>
+<p></p>
+<p>The IP address always determines the class of a network and never the subnet. When the IP addresses match, the network is said to be using a “classful” scheme. However, this allows for many wasted IP addresses when a company needs more publicly routable IP addresses than the address class they are using offers. Classless inter-domain routing (CIDR) was developed in order to make the IP addressing scheme more efficient and to delay the depletion of IPv4 addresses. Essentially, some of the network bits in the default subnet mask are borrowed and used for the host portion of the network. For example, if a business needs 300 public IP addresses, then class C addresses would be too small because of the 254 device limitation, and class B would be excessively large. With CIDR, a business could be assigned an IP address range with a subnet of 255.255.254.0/23. In CIDR notation, “/23” indicates that the first 23 bits of the address are the network part of the address, which leaves the last nine bits for host addresses, rather than the eight bits that would be available in classful addressing. That means there will now be 510 IP numbers available rather than 254.</p>
+<p>IP地址始終確定網絡的類別，而不是子網。如果<span>IP</span>地址匹配，則稱網絡正在使用“分類”方案。但是，當公司需要比他們使用的地址類更多的可公共路由的<span>IP</span>地址時，這會浪費許多<span>IP</span>地址。開發無類域間路由（<span>CIDR</span>）的目的是使<span>IP</span>尋址方案更高效並延遲<span>IPv4</span>地址的耗盡。本質上，默認子網掩碼中的某些網絡位被借用並用於網絡的主機部分。例如，如果一家企業需要<span>300</span>個公共<span>IP</span>地址，則由於<span>254</span>個設備限制，<span>C</span>類地址將太小，而<span>B</span>類將太大。使用<span>CIDR</span>，可以為企業分配<span>IP</span>地址範圍，其子網為<span>255.255.254.0/23</span>。在<span>CIDR</span>表示法中，“<span> / 23</span>”表示地址的前<span>23</span>位是地址的網絡部分，剩下的最後<span>9</span>位用於主機地址，而不是分類尋址中可用的<span>8</span>位。這意味著現在將有<span>510</span>個<span>IP</span>號碼，而不是<span>254</span>個。</p>
+<p></p>
+<p>Private Vs. Public IP Addresses 私人<span>vs. </span>公用<span>IP</span>地址</p>
+<p>IPv4 depletion affects public addresses that are routable on the Internet by such devices as routers and servers, as well as the device used to connect your home to the Internet. Whether it is a cable modem, DSL, or FIOS, that device has a public IP address that communicates with your Internet service provider (ISP). This is an example of a WAN. The LAN (local area network) is wholly comprised of private IP addresses.</p>
+<p>IPv4耗盡會影響路由器和服務器等設備以及用於將您的房屋連接到<span>Internet</span>的設備在<span>Internet</span>上可路由的公共地址。 無論是電纜調製解調器，<span>DSL</span>還是<span>FIOS</span>，該設備都具有與<span>Internet</span>服務提供商（<span>ISP</span>）通信的公共<span>IP</span>地址。 這是<span>WAN</span>的示例。<span> LAN</span>（局域網）完全由專用<span>IP</span>地址組成。</p>
+<table height="270" style="width: 558.6px;">
+<thead>
+<tr>
+<td style="width: 60px;">
+<p><strong>RFC1918 name</strong></p>
+</td>
+<td style="width: 104px;">
+<p><strong>IP address range</strong></p>
+</td>
+<td style="width: 70px;">
+<p><strong>Number of addresses</strong></p>
+</td>
+<td style="width: 104px;">
+<p><strong>Largest CIDR block (subnet mask)</strong></p>
+</td>
+<td style="width: 35px;">
+<p><strong>Host ID size</strong></p>
+</td>
+<td style="width: 35px;">
+<p><strong>Mask bits</strong></p>
+</td>
+<td style="width: 106.6px;">
+<p><strong>Classful description</strong></p>
+</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="width: 60px;">
+<p>24-bit block</p>
+</td>
+<td style="width: 104px;">
+<p>10.0.0.0 - 10.255.255.255</p>
+</td>
+<td style="width: 70px;">
+<p>16,777,216</p>
+</td>
+<td style="width: 104px;">
+<p>10.0.0.0/8 (255.0.0.0)</p>
+</td>
+<td style="width: 35px;">
+<p>24 bits</p>
+</td>
+<td style="width: 35px;">
+<p>8 bits</p>
+</td>
+<td style="width: 106.6px;">
+<p>single class A network</p>
+</td>
+</tr>
+<tr>
+<td style="width: 60px;">
+<p>20-bit block</p>
+</td>
+<td style="width: 104px;">
+<p>172.16.0.0 - 172.31.255.255</p>
+</td>
+<td style="width: 70px;">
+<p>1,048,576</p>
+</td>
+<td style="width: 104px;">
+<p>172.16.0.0/12 (255.240.0.0)</p>
+</td>
+<td style="width: 35px;">
+<p>20 bits</p>
+</td>
+<td style="width: 35px;">
+<p>12 bits</p>
+</td>
+<td style="width: 106.6px;">
+<p>16 contiguous class B networks</p>
+</td>
+</tr>
+<tr>
+<td style="width: 60px;">
+<p>16-bit block</p>
+</td>
+<td style="width: 104px;">
+<p>192.168.0.0 - 192.168.255.255</p>
+</td>
+<td style="width: 70px;">
+<p>65,536</p>
+</td>
+<td style="width: 104px;">
+<p>192.168.0.0/16 (255.255.0.0)</p>
+</td>
+<td style="width: 35px;">
+<p>16 bits</p>
+</td>
+<td style="width: 35px;">
+<p>16 bits</p>
+</td>
+<td style="width: 106.6px;">
+<p>256 contiguous class C networks</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Table used under CC-BY license from <a href="https://en.wikipedia.org/wiki/Private_network">Wikipedia</a>.</p>
+<p>In order for a LAN node to access the Internet, IPv4 uses network address translation (NAT), which is a technique where the gateway/router would replace the outgoing private IPv4 address with the publically routable address assigned by the ISP.</p>
+<p>為了使<span>LAN</span>節點能夠訪問<span>Internet</span>，<span>IPv4</span>使用網絡地址轉換（<span>NAT</span>），該技術是網關<span>/</span>路由器將出站專用<span>IPv4</span>地址替換為<span>ISP</span>分配的可公開路由的地址。</p>
+<p> </p>
+<p>Static Vs. Dynamic IP Addressing 靜態與 動態<span>IP</span>尋址</p>
+<p>Historically, the client (a workstation or a printer) would be assigned a static IP address manually using the operating system IPv4 configuration. Remember, you must have unique IP addresses in any network. Imagine how difficult it was in a large corporation to track all the different nodes and IP addresses. Dynamic host configuration protocol (DHCP) solves this problem by having one device (a server or a router) automatically assign an IP address. In the current network structure, you would still assign static IP addresses to devices that must have guaranteed connectivity: servers, routers, managed switches, etc. However, DHCP can provide many benefits in networking maintenance with the abundant wireless devices such as cell phones, tablets, and laptops coming in and out of a network daily. Companies have developed policies for employees to bring their own devices to work, thus accessing the corporate network. DHCP will give the client setup parameters (gateway, domain, and name servers), keeping a specific pool of IP addresses, and offering timed leases for a device’s IP assignment.</p>
+<p>從歷史上看，將使用操作系統<span>IPv4</span>配置為客戶端（工作站或打印機）手動分配靜態<span>IP</span>地址。請記住，任何網絡中都必須具有唯一的<span>IP</span>地址。想像一下，在大型公司中跟踪所有不同的節點和<span>IP</span>地址有多麼困難。動態主機配置協議（<span>DHCP</span>）通過讓一台設備（服務器或路由器）自動分配<span>IP</span>地址來解決此問題。在當前的網絡結構中，您仍將靜態<span>IP</span>地址分配給必須保證連接性的設備：服務器，路由器，受管理的交換機等。但是，<span>DHCP</span>可以通過大量的無線設備（例如手機，平板電腦和筆記本電腦每天進出網絡。公司已製定政策，要求員工使用自己的設備來工作，從而訪問公司網絡。<span> DHCP</span>將提供客戶端設置參數（網關，域和名稱服務器），保留特定的<span>IP</span>地址池，並為設備的<span>IP</span>分配提供定時租用。</p>
+<p> </p>
+<p>APIPA Link-Local APIPA 本地鏈接</p>
+<p>Link-local addresses are special addresses assigned by the operating system when either there is no statically assigned IP address, or the DHCP does not assign one to the network interface. Link-local addresses are not routable and only function in a LAN segment. In IPv4, the address range is 169.254.0.0/16 and the form is 169.254.x.x. In IPv6, the form is FE80::/64. In a Microsoft OS, the link-local address is referred to as automatic private IP addressing (APIPA).</p>
+<p>If you are troubleshooting an NIC (network interface card) that is supposed to be connected and you see a link-local address, this indicates that there is something wrong with the configuration because the OS assigned the address.</p>
+<p>當沒有靜態分配的<span>IP</span>地址，或者<span>DHCP</span>沒有為網絡接口分配一個<span>IP</span>地址時，本地鏈接地址是操作系統分配的特殊地址。 本地鏈接地址不可路由，只能在<span>LAN</span>網段中使用。 在<span>IPv4</span>中，地址範圍為<span>169.254.0.0/16</span>，格式為<span>169.254.x.x</span>。 在<span>IPv6</span>中，格式為<span>FE80 :: / 64</span>。 在<span>Microsoft</span>操作系統中，本地鏈接地址稱為自動專用<span>IP</span>尋址（<span>APIPA</span>）。</p>
+<p>如果要對應該連接的<span>NIC</span>（網絡接口卡）進行故障排除，並且看到鏈接本地地址，則表明配置有問題，因為操作系統分配了該地址。</p>
+<p></p>
+<p>Client-side DHCP 客戶端<span>DHCP</span></p>
+<p>DHCP works by having an authoritative device, either a server or a router, offering to assign the IP address. In order for this to work, the client must be configured to look for the DHCP authority, and confirm that it will accept the IP assignment. These settings are located in “network connections” through either the network and sharing center or directly through the control panel. The configuration settings are located in the properties of the connection under either IPv4 or IPv6.</p>
+<p>DHCP通過擁有授權設備（服務器或路由器）來分配<span>IP</span>地址而起作用。 為了使它起作用，必須將客戶端配置為尋找<span>DHCP</span>授權，並確認它將接受<span>IP</span>分配。 這些設置通過網絡和共享中心位於“網絡連接”中，也可以直接通過控制面板位於“網絡連接”中。 配置設置位於<span>IPv4</span>或<span>IPv6</span>下的連接屬性中。</p>
+<p> </p>
+<p>Client-side DNS settings 客戶端<span>DNS</span>設置</p>
+<p>The domain name system (DNS) is a part of the Internet protocol that translates IP addresses to name addresses. There is a setting located in the network properties section of the IPv4 or IPv6 property window that allows for the manual setting of the the domain name system (DNS) server address. The local DNS cache will keep a local record of IP address to name conversion for both LAN devices and Internet addresses. Alternate DNS server addresses can be added to the client to assist in name resolution, thus improving data flow.</p>
+<p>域名系統（<span>DNS</span>）是<span>Internet</span>協議的一部分，該協議將<span>IP</span>地址轉換為名稱地址。<span> IPv4</span>或<span>IPv6</span>屬性窗口的網絡屬性部分中有一個設置，允許手動設置域名系統（<span>DNS</span>）服務器地址。 本地<span>DNS</span>緩存將保留<span>IP</span>地址到<span>LAN</span>設備和<span>Internet</span>地址的名稱轉換的本地記錄。 可以將備用<span>DNS</span>服務器地址添加到客戶端以幫助名稱解析，從而改善數據流。</p>
+<p></p>
+<p>Gateway 閘道器</p>
+<p>The gateway is the device that connects different networks types together. In most SOHO (small office, home office) environments today, this is the router that connects the LAN to the ISP modem through the WAN port (cable, DSL, or FIOS), which provides Internet access. In a larger corporate environment, it is the last router in the LAN that connects to a WAN link, and then passes the IP packets to their destination. The difference is that in a larger corporate environment, there can be multiple LAN segments and routers between the client workstation and the gateway.</p>
+<p>網關是將不同網絡類型連接在一起的設備。 在當今的大多數<span>SOHO</span>（小型辦公室，家庭辦公室）環境中，這是通過<span>WAN</span>端口（電纜，<span>DSL</span>或<span>FIOS</span>）將<span>LAN</span>連接到<span>ISP</span>調製解調器的路由器，可以提供<span>Internet</span>訪問。 在較大的公司環境中，它是<span>LAN</span>中的最後一個路由器，該路由器連接到<span>WAN</span>鏈接，然後將<span>IP</span>數據包傳遞到其目的地。 區別在於，在較大的公司環境中，客戶端工作站和網關之間可以有多個<span>LAN</span>網段和路由器。</p>
+<p></p>
+<h3>Windows Networking Windows網絡 </h3>
+<p>Windows networking is nearly identical in all aspects from Vista through to Windows 10. To access the network settings, go to either the control panel, then “network and Internet,” then “network and sharing center,” or right-click the “open network and sharing center” icon in the system tray (next to the clock).</p>
+<p>從<span>Vista</span>到<span>Windows 10</span>，<span>Windows</span>聯網在各個方面都幾乎相同。要訪問網絡設置，請轉到控制面板，然後依次單擊“網絡和<span>Internet</span>”，“網絡和共享中心”，或右鍵單擊“打開”。 網絡和共享中心”圖標（位於時鐘旁邊）。</p>
+<p><img alt="" height="67" src="/images/8.png" width="350"/></p>
+<p>Accessing the network and sharing center from the system tray. Image used under CC-BY license from Russell Burchill.</p>
+<p>Select (1) Ethernet, then (2) properties, then (3) TCP/IPv4.</p>
+<p>選擇（<span>1</span>）以太網，然後選擇（<span>2</span>）屬性，然後選擇（<span>3</span>）<span>TCP / IPv4</span>。</p>
+<p><img alt="" height="326" src="/images/9.png" width="563"/></p>
+<p>The Ethernet properties window of a particular network. Image used under CC-BY license from Russell Burchill.</p>
+<p>Remember, a technician will ensure settings fit the current network. Most networks are set up with DHCP, which will provide the workstation with an IP address, gateway, and DNS server address.</p>
+<p>Double-click the IPv4 properties dialogue box and set both radio buttons to “obtain (an IP address/DNS server address) automatically.” The window on the right in the image below allows for the APIPA address to be automatically assigned or for the user to configure a static IPv4 address.</p>
+<p>請記住，技術人員將確保設置適合當前網絡。 大多數網絡都設置有<span>DHCP</span>，它將為工作站提供<span>IP</span>地址，網關和<span>DNS</span>服務器地址。</p>
+<p>雙擊“<span> IPv4</span>屬性”對話框，並將兩個單選按鈕設置為“自動獲取（<span>IP</span>地址<span>/ DNS</span>服務器地址）”。 下圖右側的窗口允許自動分配<span>APIPA</span>地址或允許用戶配置靜態<span>IPv4</span>地址。</p>
+<p><img alt="" height="315" src="/images/10.png" width="561"/></p>
+<p>TCP/IPv4 properties windows. Image used under CC-BY license from Russell Burchill.</p>
+<p></p><h1>W10</h1>

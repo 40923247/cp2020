@@ -1,0 +1,264 @@
+<!DOCTYPE html><html>
+        <head>
+        <title>CMSiMDE</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/icomoon/style.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/magnific-popup.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/jquery-ui.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/aos.css">
+        <link rel="stylesheet" href="./../cmsimde/static/chimper/css/style.css">
+        <link rel="shortcut icon" href="./../cmsimde/static/favicons.png">
+        
+        <style type='text/css'>
+            .site-section {
+            background-color: #FFFF;
+            padding: 40px 40px;
+            }
+            body > div > div.dropdown.open {
+                display: block;
+            }
+        </style>
+    
+        <!-- <script src="./../cmsimde/static/jquery.js"></script> -->
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+        <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/normalize.min.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch_set.js"></script>
+        <script src="tipuesearch_content.js"></script>
+        <link rel="stylesheet" href="./../cmsimde/static/tipuesearch/css/tipuesearch.css">
+        <script src="./../cmsimde/static/tipuesearch/tipuesearch.js"></script>
+        <script>
+            /* original tipuesearch
+            $(document).ready(function() {
+                 $('#tipue_search_input').tipuesearch();
+            });
+            */
+            // customed doSearch
+            function doSearch() {
+                $('#tipue_search_input').tipuesearch({
+                    newWindow: true, 
+                    minimumLength: 2,
+                    wholeWords: false, // for search 中文
+                });
+            }
+            $(document).ready(doSearch);
+        </script>
+        
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushBash.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDiff.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushHaxe.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushCSharp.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/syntaxhighlighter/shBrushDart.js"></script>
+<link type="text/css" rel="stylesheet" href="./../cmsimde/static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+<!-- 暫時不用
+<script src="./../cmsimde/static/fengari-web.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../cmsimde/static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+<style>
+img.add_border {
+    border: 3px solid blue;
+}
+</style>
+
+</head>
+<body>
+<div class='container'><nav>
+        
+    <div class="site-wrap">
+
+    <div class="site-mobile-menu">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    
+            <header class="site-navbar py-4 bg-white" role="banner">
+              <div class="container-fluid">
+                <div class="row align-items-center">
+                <h1>40923247 cp2020</h1>
+                <div class="pl-4">
+                    <form>
+                    <input type="text" placeholder="Search" name="q" id="tipue_search_input" pattern=".{2,}" title="At least 2 characters" required>
+                    </form>
+                </div>
+                  <!-- <div class="col-11 col-xl-2">
+                    <h1 class="mb-0 site-logo"><a href="index.html" class="text-black h2 mb-0">40923247 cp2020</a></h1> 
+                  </div>
+                  -->
+                  <div class="col-12 col-md-10 d-none d-xl-block">
+                    <nav class="site-navigation position-relative text-right" role="navigation">
+    <ul class='site-menu js-clone-nav mr-auto d-none d-lg-block'>
+                        <li class="active has-children"><a href="index.html">Home</a>
+                        <ul class="dropdown">
+                            <li><a href="sitemap.html">Site Map</a></li>
+                            <li><a href="./../reveal/index.html">reveal</a></li>
+                            <li><a href="./../blog/index.html">blog</a></li>
+                        </ul>
+                      </li>
+                     <li class='has-children'><a href='HW1.html'>HW1</a><ul class='dropdown'><li class='has-children'><a href='U13.html'>U13</a><ul class='dropdown'><li><a href='IPv4 and IPv6 Addresses.html'>IPv4 and IPv6 Addresses</a><li><a href='IPv4 Addressing.html'>IPv4 Addressing</a><li><a href='IPv4 Address Classes.html'>IPv4 Address Classes</a><li><a href='Assigning an IP Address 分配IP地址.html'>Assigning an IP Address 分配IP地址</a><li><a href='IPv6.html'>IPv6</a><li><a href='Classful Vs  Classless Addressing  Subnet and CIDR.html'>Classful Vs  Classless Addressing  Subnet and CIDR</a><li><a href='Windows Networking Windows網絡.html'>Windows Networking Windows網絡</a></li></li></ul></ul><li><a href='W10.html'>W10</a></li>
+                      </ul>
+                </nav>
+              </div>
+              <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="icon-menu h3"></span></a></div>
+              </div>
+
+            </div>
+          </div>
+          
+        </header>
+    <div id="tipue_search_content">Assigning an IP Address 分配IP地址 << <a href='Assigning an IP Address 分配IP地址.html'>Previous</a> <a href='Classful Vs  Classless Addressing  Subnet and CIDR.html'>Next</a> >> Classful Vs  Classless Addressing  Subnet and CIDR<br /><h1>IPv6</h1>
+<p>Internet protocol version 6 was developed to provide more public IP addresses, because the IPv4 public addressing space was running out as a result of the proliferation of network devices in our lives. Now, our cellphones, laptops, tablets, thermostats, refrigerators, TVs, and more are all being connected to the network and they all need IP addresses. Due to the 32-bit addresses used by IPv4, we were limited to 4.2 billion IP addresses, but by increasing the address space to 128-bit addresses in IPv6, the number of IP addresses available has increased to 340 undecillion addresses. This is 5 x 1028 IPv6 addresses for every person on the planet, including children.</p>
+<p>IPv5 was designed, but eventually skipped in implementation, because it was only a 64-bit address and some feared it didn’t provide a large enough pool of available IP addresses. This experimental protocol was abandoned, but many of its concepts were incorporated into the IPv6 protocol, as well as some other protocols.</p>
+<p>Internet協議版本<span>6</span>的開發是為了提供更多的公共<span>IP</span>地址，因為由於我們生活中網絡設備的激增，<span>IPv4</span>公共尋址空間已耗盡。 現在，我們的手機，筆記本電腦，平板電腦，恆溫器，冰箱，電視等已全部連接到網絡，並且它們都需要<span>IP</span>地址。 由於<span>IPv4</span>使用<span>32</span>位地址，因此我們只能使用<span>42</span>億個<span>IP</span>地址，但是通過將地址空間增加到<span>IPv6</span>中的<span>128</span>位地址，可用的<span>IP</span>地址數量已增加到<span>340</span>個十億位地址。 這是地球上每個人（包括孩子）的<span>5 x 1028 IPv6</span>地址。</p>
+<p>IPv5是經過設計的，但最終被跳過，因為它只是一個<span>64</span>位地址，並且有人擔心它不能提供足夠大的可用<span>IP</span>地址池。 該實驗性協議已被放棄，但其許多概念以及其他一些協議已合併到<span>IPv6</span>協議中。</p>
+<table width="557">
+<tbody>
+<tr>
+<td width="75"></td>
+<td colspan="2" width="478">
+<p>Number of Addresses</p>
+</td>
+</tr>
+<tr>
+<td width="75">
+<p>IPv4</p>
+</td>
+<td width="17">
+<p>2<sup>32</sup></p>
+</td>
+<td>
+<p>4,294,967,296</p>
+</td>
+</tr>
+<tr>
+<td width="75">
+<p>IPv6</p>
+</td>
+<td width="17">
+<p>2<sup>128</sup></p>
+</td>
+<td>
+<p>340,282,366,920,938,000,000,000,000,000,000,000,000</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p></p>
+<p>Benefits of IPv6 IPv6的好處</p>
+<p></p>
+<p>IPv6 has many benefits over IPv4, the biggest of which is the number of available IP addresses. In IPv6, there is no broadcast provided, which frees up IP addresses, reduces the amount of traffic sent over the network, and increases bandwidth. Also, IPv6 doesn’t allow packets to be fragmented (broken into pieces) during transmission. This is handled by the protocol by resizing the maximum transmission unit size each time a session is created between two devices.</p>
+<p>A major benefit of IPv6 is that it allows for dual stack implementation, which means that IPv4 and IPv6 can run simultaneously on a device and provide service to the device from either protocol without conflict. IPv6 can also run on top of IPv4 as a tunneled protocol, thereby allowing it to run over older devices, as well.</p>
+<p>Lastly, the packet headers in IPv6 are much simpler than in IPv4. In IPv4, there are 12 fields that must be completely filled out (adding to overhead and complexity), but in IPv6 this was reduced to the bare minimum of five fields. This includes fields such as source and destination address, as well as quality of service priority.</p>
+<p>與<span>IPv4</span>相比，<span>IPv6</span>有很多好處，其中最大的好處就是可用<span>IP</span>地址的數量。在<span>IPv6</span>中，沒有提供廣播，這釋放了<span>IP</span>地址，減少了通過網絡發送的流量，並增加了帶寬。另外，<span>IPv6</span>不允許在傳輸過程中將數據包分段（分成碎片）。協議通過每次在兩個設備之間創建會話時調整最大傳輸單元大小來解決此問題。</p>
+<p>IPv6的主要優點在於它允許雙協議棧實現，這意味著<span>IPv4</span>和<span>IPv6</span>可以在設備上同時運行，並可以從任一協議向設備提供服務而不會發生衝突。<span> IPv6</span>還可以作為隧道協議在<span>IPv4</span>之上運行，從而也可以在較舊的設備上運行。</p>
+<p>最後，<span>IPv6</span>中的數據包頭比<span>IPv4</span>中的數據包頭簡單得多。在<span>IPv4</span>中，必須完全填寫<span>12</span>個字段（增加了開銷和復雜性），但是在<span>IPv6</span>中，此字段減少到最少五個字段。這包括諸如源地址和目標地址以及服務質量優先級之類的字段。</p>
+<p></p>
+<p>IPv6 Address Structure IPv6地址結構</p>
+<p>While IPv6 has numerous improvements over IPv4, the most notable thing about IPv6 that people see is the format of the address. Instead of the dotted-decimal notation we used in IPv4 with addresses like 192.168.1.1, IPv6 uses eight groupings of four hexadecimal digits in each group. Each group is then broken apart by a colon (:). An example of an IPv6 address is 2002:0000:0000:0000:0000:0000:4815:54ae.</p>
+<p>A hexadecimal digit allows for counting from zero to 15 using the digits 0-9, then the letters A through F. Each hexadecimal digit replaces four binary digits (or four 1s and 0s), allowing us to write an IPv6 address using (at most) 32 hexadecimal digits.</p>
+<p>Luckily, the creators of IPv6 allowed for a shorthand. First, anytime there are leading zeros, they can be dropped. This is equivalent to dropping the leading zeros in the number 0010 to 10. The numbers are equivalent, as long as the zeros are in front of the other digits. The second shorthand technique involves several groupings of four zeros. When multiple groupings of four zeros are present, they can be represented by a double colon (::). Note that you can only use the double colon once per address, because the only way to know how many sets of zeros you’ve replaced with the double colon is to compare the shorthand address with the total number of bits available.</p>
+<p>儘管<span>IPv6</span>相對於<span>IPv4</span>進行了許多改進，但是人們看到的關於<span>IPv6</span>的最值得注意的事情是地址的格式。<span> IPv6</span>不是在<span>IPv4</span>中使用像<span>192.168.1.1</span>這樣的地址使用的點分十進製表示法，而是在每個組中使用四個十六進制數字組成的八組。然後，每個組用冒號（<span>:)</span>分隔。<span> IPv6</span>地址的示例是<span>2002</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>4815</span>：<span>54ae</span>。</p>
+<p>十六進制數字允許使用數字<span>0-9</span>從<span>0</span>到<span>15</span>進行計數，然後使用字母<span>A</span>到<span>F</span>。每個十六進制數字都替換了四個二進制數字（或四個<span>1</span>和<span>0</span>），從而允許我們使用（最多為）<span>32</span>個十六進制數字。</p>
+<p>幸運的是，<span>IPv6</span>的創建者允許使用簡寫形式。首先，只要有前導零，就可以將其丟棄。這等效於將數字<span>0010</span>中的前導零刪除為<span>10</span>。這些數字是等效的，只要零在其他數字的前面即可。第二種速記技術涉及四個零的幾個分組。當存在四個零的多個分組時，可以用雙冒號（：<span>:)</span>表示。請注意，每個地址只能使用雙冒號一次，因為要知道用雙冒號替換了多少個零集的唯一方法是將速記地址與可用位數進行比較。</p>
+<p></p>
+<p>EXAMPLE</p>
+<p>2002:0000:0000:0000:0000:0000:0000:4815:54ae can be rewritten. One way to rewrite this address is to eliminate the leading zeros.</p>
+<p>2002：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>4815</span>：<span>54ae</span>可以重寫。 重寫此地址的一種方法是消除前導零。</p>
+<p><img alt="" height="148" src="./../images/5.png" width="569"/></p>
+<p>By eliminating the leading zeros, 2002:0000:0000:0000:0000:0000:0000:4815:54ae becomes 2002:0:0:0:0:0:0:4815:54ae.</p>
+<p>Alternatively, this address can be rewritten using a double colon (::) in place of a multiple grouping of four 0s.</p>
+<p>通過消除前導零，<span>2002</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>4815</span>：<span>54ae</span>變為<span>2002</span>：<span>0</span>：<span>0</span>：<span>0</span>：<span>0</span>：<span>0</span>：<span>0</span>：<span>0</span>：<span>4815</span>：<span>54ae</span>。</p>
+<p>或者，可以使用雙冒號（：<span>:)</span>代替四個<span>0</span>的多個分組來重寫此地址。</p>
+<p><img alt="" height="146" src="./../images/6.png" width="545"/></p>
+<p>By replacing multiple groupings of four 0s with a double colon, 2002:0000:0000:0000:0000:0000:0000:4815:54ae becomes 2002::4815:54ae.</p>
+<p>通過用雙冒號替換四個<span>0</span>的多個分組，<span>2002</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>4815</span>：<span>54ae</span>變為<span>2002 :: 4815</span>：<span>54ae</span>。</p>
+<p></p>
+<p><span>EXAMPLE</span></p>
+<p>2009:0123:4040:0000:0000:0000:000A:100B can be written by both eliminating leading zeros and using double colons.</p>
+<p>可以通過消除前導零和使用雙冒號來編寫<span>2009</span>：<span>0123</span>：<span>4040</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>000A</span>：<span>100B</span>。</p>
+<p><img alt="" height="149" src="./../images/7.png" width="546"/></p>
+<p>2009:0123:4040:0000:0000:0000:000A:100B becomes 2009:123:4040::A:100B.</p>
+<p>As you can see, the IPv6 addresses are more complex than their IPv4 counterparts, but over time, you will get used to seeing how they are written, and what the different notation indicates.</p>
+<p>2009：<span>0123</span>：<span>4040</span>：<span>0000</span>：<span>0000</span>：<span>0000</span>：<span>000A</span>：<span>100B</span>變為<span>2009</span>：<span>123</span>：<span>4040 :: A</span>：<span>100B</span></p>
+<p>如您所見，<span>IPv6</span>地址比其對應的<span>IPv4</span>地址要復雜得多，但是隨著時間的流逝，您將習慣於看到它們的寫法以及不同符號的含義。</p>
+<p>IPv6 Data Flows IPv6資料流向圖</p>
+<p>Data flows in IPv6 are similar to those in IPv4. In fact, unicast and multicast work identical to their IPv4 counterparts. But, because there is no broadcast in IPv6, it has been replaced with “anycast.” Anycast allows data to travel from a single source device to the nearest of multiple, but specific, devices on a network. Anycasting is designed to let one host initiate the efficient updating of router tables for a group of hosts. IPv6 can determine which gateway host is closest and sends the packets to that host as though it were a unicast communication. In turn, that host can anycast to another host in the group until all routing tables are updated.</p>
+<p>IPv6中的數據流類似於<span>IPv4</span>中的數據流。 實際上，單播和多播的工作方式與<span>IPv4</span>相同。 但是，由於<span>IPv6</span>中沒有廣播，因此已將其替換為“任何廣播”。<span> Anycast</span>允許數據從單個源設備傳輸到網絡上多個（但特定的）設備中最接近的一個。 任意廣播旨在讓一個主機為一組主機啟動路由器表的有效更新。<span> IPv6</span>可以確定哪個網關主機最接近，並將數據包發送到該主機，就好像它是單播通信一樣。 相應地，該主機可以向組中的另一台主機任意廣播，直到更新所有路由表為止。</p>
+<br />Assigning an IP Address 分配IP地址 << <a href='Assigning an IP Address 分配IP地址.html'>Previous</a> <a href='Classful Vs  Classless Addressing  Subnet and CIDR.html'>Next</a> >> Classful Vs  Classless Addressing  Subnet and CIDR</div>
+        
+    <!-- footer -->
+      <div class="container">
+        <div class="row pt-3 mx-auto">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+        </div>
+      </div>
+    <!-- for footer -->
+    
+        </div> <!-- for site wrap -->
+            <!-- <script src="../cmsimde/static/chimper/js/jquery-3.3.1.min.js"></script> -->
+            <script src="../cmsimde/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery-ui.js"></script>
+            <script src="../cmsimde/static/chimper/js/popper.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/owl.carousel.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.stellar.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.countdown.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/jquery.magnific-popup.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/bootstrap-datepicker.min.js"></script>
+            <script src="../cmsimde/static/chimper/js/aos.js"></script>
+            <!--
+            <script src="../cmsimde/static/chimper/js/typed.js"></script>
+                    <script>
+                    var typed = new Typed('.typed-words', {
+                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
+                    typeSpeed: 80,
+                    backSpeed: 80,
+                    backDelay: 4000,
+                    startDelay: 1000,
+                    loop: true,
+                    showCursor: true
+                    });
+                    </script>
+            -->
+            <script src="../cmsimde/static/chimper/js/main.js"></script>
+        
+<!-- 啟用 LaTeX equations 編輯 -->
+  <!-- <script>
+  MathJax = {
+    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
+  };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
+    </body></html>
+        

@@ -133,33 +133,22 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">U13 << <a href='U13.html'>Previous</a> <a href='IPv4 Addressing.html'>Next</a> >> IPv4 Addressing<br /><h1>IPv4 and IPv6 Addresses</h1>
-<p><span title="Quick scroll up">Overview</span></p>
-<p><span title="Quick scroll up"><span>In this lesson, we will discuss TCP/IP, and the two common types of Internet addressing: Internet protocol version 4 (IPv4) and Internet protocol version 6 (IPv6). We will discuss IPv4 in depth, as it is still the most dominant version in use in our networks. Then, we will cover the specifics of IPv6, differences between IPv4 and IPv6, and the reason we are moving toward IPv6 in the future.</span></span></p>
-<p><span title="Quick scroll up"><span>總覽</span></span></p>
-<p><span title="Quick scroll up"><span>在本課程中，我們將討論TCP / IP以及Internet尋址的兩種常見類型：Internet協議版本4（IPv4）和Internet協議版本6（IPv6）。 我們將深入討論IPv4，因為它仍然是我們網絡中使用的最主要版本。 然後，我們將介紹IPv6的細節，IPv4與IPv6之間的差異以及未來轉向IPv6的原因。</span></span></p>
-<p><span title="Quick scroll up">TCP/IP</span></p>
-<p id="N1069E" lang="">Computer networks — including the Internet, which is the largest computer network — use Transmission Control Protocol/Internet Protocol or TCP/IP for network communications both internally on a LAN/WAN and externally to the Internet.</p>
-<p id="N106A1" lang="">TCP/IP provides end-to-end connectivity of data. TCP/IP specifies how data should be grouped, addressed, transmitted, routed, and received at the destination address. The TCP/IP model, along with many of its protocols, is maintained and managed by the IETF (Internet Engineering Task Force).</p>
-<p id="N106A4" lang="">TCP/IP is one of two sets of protocols that collectively operate in the transport and network layers of the OSI model.</p>
-<p>計算機網路（包括作為最大計算機網路的Internet）使用傳輸控制協議/ Internet協議或TCP / IP進行內部LAN / WAN上和外部Internet的網路通信。</p>
-<p>TCP / IP提供數據的端到端連接。 TCP / IP指定如何在目標地址處對數據進行分組，尋址，傳輸，路由和接收。 TCP / IP模型及其許多協議由IETF（Internet工程任務組）維護和管理。</p>
-<p>TCP / IP是在OSI模型的傳輸層和網絡層中共同運行的兩組協議之一。</p>
-<p><img alt="" height="467" src="./../images/000.png" width="404"/></p>
-<p lang=""></p>
-<p><span title="Quick scroll up"><span>OSI Model. Image used under CC-BY-SA license from <a href="https://commons.wikimedia.org/wiki/File:Osi-model-jb.svg#/media/File:Osi-model-jb.svg" id="_i_1" lang="" target="_blank">Wikimedia Commons</a><span>.</span></span></span></p>
-<p><span title="Quick scroll up"><span><span>In addition to creating message segments and ensuring connectivity, some of the basic characteristics of the IP protocol ensure that datagrams are routed to the correct destination using a binary addressing scheme. While the process of how the IP addresses are derived from binary (and hexadecimal relationships) is not covered in this course, it is important to know that just as computer CPUs use binary numbers to process data, networking hardware and protocols do so as well.</span></span></span></p>
-<p><span title="Quick scroll up"><span><span>除了創建訊息段並確保連接性之外，IP協議的某些基本特徵還可以確保使用二進制尋址找方案將數據路由到正確的目的地。 儘管本課程未涵蓋如何從二進制（和十六進制關係）派生IP地址的過程，但重要的是要知道，就像計算機CPU使用二進制數來處理數據一樣，網絡硬體和網路傳輸協定也是如此。</span></span></span></p>
-<p><span>IPv4 and IPv6 Addresses</span></p>
-<p><span>Network devices require a logical address — either an IPv4 or IPv6 address (see the network layer in the diagram above) — when moving data from one network segment to another. As we discussed in previous modules, switches make their intelligent switching decisions (see the data link layer in the diagram above based on media access control (MAC) addresses. The MAC address, also known as the physical address, is the unique identifier hard coded on a network interface card by the manufacturer. Switches use these MAC addresses to identify which devices are on which switch ports, and forward traffic within the network segment to the correct ports based on these addresses. When data traffic needs to cross the boundaries of the network, it requires a logical address that the router can use to make intelligent routing decisions. In most modern networks, this is done by using TCP/IP addressing. Historically, other protocols existed, such as internetwork packet exchange/sequenced packet exchange (IPX/SPX) for Novell networks, AppleTalk, and NetBEUI for Microsoft networks. TCP/IP replaced these protocols almost exclusively due to its robust nature, reliability, and availability.</span></p>
-<p><span> </span></p>
-<p><span>While the majority of our networks today still use IPv4, many networks are migrating to the newer IPv6 addressing standards. Additionally, many networks are offering dual support to both IPv4 and IPv6 during the transition. The reason for this transition is that we were running out of valid IPv4 addresses. IPv4 uses a 32-bit addressing scheme, providing only 4.2 billion available addresses, but IPv6 uses a 128-bit addressing scheme. IPv6 allows for 2128addresses, or 340,282,366,920,938,000,000,000,000,000,000,000,000 (3.4 x 1038) unique IP addresses. IPv6 allows for more IP addresses than humanity could ever utilize. At least that is what we think right now.</span></p>
-<p><span> </span></p>
-<p><span>IPv4</span>和<span>IPv6</span>地址</p>
-<p>將數據從一個網段移動到另一個網段時，網絡設備需要邏輯地址<span>-IPv4</span>或<span>IPv6</span>地址（請參見上圖中的網絡層）。正如我們在之前的模塊中討論的那樣，交換機做出明智的交換決策（請參見上圖中的數據鏈路層，基於媒體訪問控制（<span>MAC</span>）地址。<span>MAC</span>地址，也稱為物理地址，是唯一的硬編碼標識符）交換機使用這些<span>MAC</span>地址來識別哪些設備在哪個交換機端口上，然後根據這些地址將網段內的流量轉發到正確的端口。在網絡中，它需要路由器可以用來做出智能路由決定的邏輯地址。在大多數現代網絡中，這是通過使用<span>TCP / IP</span>尋址來完成的。<span> / SPX</span>）（用於<span>Novell</span>網絡），<span>AppleTalk</span>和用於<span>Microsoft</span>網絡的<span>NetBEUI</span>。<span>TCP/ IP</span>幾乎完全由於其魯棒性，可靠性和可用性而取代了這些協議。不可靠。</p>
-<p><span> </span></p>
-<p>儘管當今我們的大多數網絡仍使用<span>IPv4</span>，但許多網絡正在遷移到更新的<span>IPv6</span>尋址標準。此外，在過渡期間，許多網絡都對<span>IPv4</span>和<span>IPv6</span>提供雙重支持。進行此轉換的原因是我們用盡了有效的<span>IPv4</span>地址。<span> IPv4</span>使用<span>32</span>位尋址方案，僅提供<span>42</span>億個可用地址，而<span>IPv6</span>使用<span>128</span>位尋址方案。<span> IPv6</span>允許<span>2128</span>個地址或<span>340,282,366,920,938,000,000,000,000,000,000,000,000,000,000</span>（<span>3.4 x 1038</span>）個唯一<span>IP</span>地址。<span> IPv6</span>所允許的<span>IP</span>地址比人類所能利用的更多。至少這就是我們現在的想法。</p>
-<br />U13 << <a href='U13.html'>Previous</a> <a href='IPv4 Addressing.html'>Next</a> >> IPv4 Addressing</div>
+    <div id="tipue_search_content">Classful Vs  Classless Addressing  Subnet and CIDR << <a href='Classful Vs  Classless Addressing  Subnet and CIDR.html'>Previous</a> <a href='W10.html'>Next</a> >> W10<br /><h1>Windows Networking Windows網絡</h1>
+<p>Windows networking is nearly identical in all aspects from Vista through to Windows 10. To access the network settings, go to either the control panel, then “network and Internet,” then “network and sharing center,” or right-click the “open network and sharing center” icon in the system tray (next to the clock).</p>
+<p>從<span>Vista</span>到<span>Windows 10</span>，<span>Windows</span>聯網在各個方面都幾乎相同。要訪問網絡設置，請轉到控制面板，然後依次單擊“網絡和<span>Internet</span>”，“網絡和共享中心”，或右鍵單擊“打開”。 網絡和共享中心”圖標（位於時鐘旁邊）。</p>
+<p><img alt="" height="67" src="./../images/8.png" width="350"/></p>
+<p>Accessing the network and sharing center from the system tray. Image used under CC-BY license from Russell Burchill.</p>
+<p>Select (1) Ethernet, then (2) properties, then (3) TCP/IPv4.</p>
+<p>選擇（<span>1</span>）以太網，然後選擇（<span>2</span>）屬性，然後選擇（<span>3</span>）<span>TCP / IPv4</span>。</p>
+<p><img alt="" height="326" src="./../images/9.png" width="563"/></p>
+<p>The Ethernet properties window of a particular network. Image used under CC-BY license from Russell Burchill.</p>
+<p>Remember, a technician will ensure settings fit the current network. Most networks are set up with DHCP, which will provide the workstation with an IP address, gateway, and DNS server address.</p>
+<p>Double-click the IPv4 properties dialogue box and set both radio buttons to “obtain (an IP address/DNS server address) automatically.” The window on the right in the image below allows for the APIPA address to be automatically assigned or for the user to configure a static IPv4 address.</p>
+<p>請記住，技術人員將確保設置適合當前網絡。 大多數網絡都設置有<span>DHCP</span>，它將為工作站提供<span>IP</span>地址，網關和<span>DNS</span>服務器地址。</p>
+<p>雙擊“<span> IPv4</span>屬性”對話框，並將兩個單選按鈕設置為“自動獲取（<span>IP</span>地址<span>/ DNS</span>服務器地址）”。 下圖右側的窗口允許自動分配<span>APIPA</span>地址或允許用戶配置靜態<span>IPv4</span>地址。</p>
+<p><img alt="" height="315" src="./../images/10.png" width="561"/></p>
+<p>TCP/IPv4 properties windows. Image used under CC-BY license from Russell Burchill.</p>
+<p></p><br />Classful Vs  Classless Addressing  Subnet and CIDR << <a href='Classful Vs  Classless Addressing  Subnet and CIDR.html'>Previous</a> <a href='W10.html'>Next</a> >> W10</div>
         
     <!-- footer -->
       <div class="container">

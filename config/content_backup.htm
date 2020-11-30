@@ -1,3 +1,5 @@
+<h1>首頁</h1>
+<p>HI HI</p>
 <h1>HW1</h1>
 <h2>U13</h2>
 <h3>IPv4 and IPv6 Addresses</h3>
@@ -696,7 +698,8 @@
 <p><span><span><span><span><span>端口號被認為是眾所周知的或短暫的。</span><span>眾所周知的端口號在1到1023之間，例如我們上一個示例中的Web瀏覽端口號80。</span><span>端口80保留為所有超文本傳輸協議（HTTP）通信的眾所周知的端口。</span><span>臨時端口號被認為是“高編號”端口，起始於1024，最高可達65,535。</span><span>這些通常是客戶端發出請求的端口，正如我們在上面的Web瀏覽示例中所見，當客戶端選擇端口1248作為其請求端口時。</span></span></span></span></span></p>
 <p><span><span><span><span><span><img alt="" height="347" src="/images/13.png" width="558"/></span></span></span></span></span></p>
 <p><span><span><span><span><span>Port numbers and IP addresses. Image used under CC-BY license from <a href="http://www.nationalstem.org/" id="_i_1" lang="" target="_blank">National STEM Consortium</a><span>.</span></span></span></span></span></span></p>
-<p><span><span><span><span><span></span></span></span></span></span></p><h3>Networking Transfer Protocols 網絡傳輸協議</h3>
+<p><span><span><span><span><span></span></span></span></span></span></p>
+<h3>Networking Transfer Protocols 網絡傳輸協議</h3>
 <p id="N10698" lang="">TCP/IP contains a suite of many different transfer protocols for routing information across networks. Each protocol uses a different well-known port to keep its traffic separate from the others. Web browsing occurs using either hypertext transfer protocol (HTTP) or hypertext transfer protocol secure (HTTPS). When it uses HTTP, it uses port 80. If, however, the client requests that the site be sent securely using encryption, then it uses the HTTPS protocol and port 443. When being sent securely, the client and server use either secure sockets layer (SSL) or transport layer security (TLS). These additional layers are put on top of the existing HTTP standard to encrypt the data connection between the client and the server.</p>
 <p id="N1069B" lang="">In addition to browsing the web, there are many other things that can be done on the network and each uses its own dedicated port number to keep the traffic separate. File transfer protocol (FTP) uses port 21. FTP is a standard network protocol used to transfer computer files from one host to another host over a TCP-based network, such as the Internet. FTP is built on a client-server architecture and uses separate control and data connections between the client and the server.</p>
 <p id="N1069E" lang="">Telnet is a text-based remote access program for computers that communicates over port 23. Telnet is a user command and an underlying TCP/IP protocol for accessing computers remotely. Through telnet, an administrator or another user can access someone else's computer remotely. Unfortunately, telnet is an unsecured protocol where all the information between the client and server is communicated in clear text, so anyone who can capture this data can read it easily. For this reason, secure shell (SSH), which uses port 22, was introduced to replace telnet. SSH is a cryptographic (encrypted) network protocol for initiating text-based shell sessions on remote machines, similar to telnet but with the added strength of encryption.</p>
@@ -718,7 +721,8 @@
 <p id="N106BB" lang="">Internet message access protocol (IMAP) servers let you work with email messages without downloading them to your computer first. This allows for email to be synchronized (synced) across multiple devices, including your desktop, laptop, tablet, and smartphone. IMAP uses port 143 to receive and synchronize your email. The real benefit of using IMAP, especially in today’s multiple device access world, is that it can change the read and delete state of messages across the multiple devices. For example, if I read a message on my phone, when I log into my desktop, the message will also show as having been read already.</p>
 <p id="N106B5" lang=""><span>多年來，電子郵件已經有了很大的發展，但仍在三種主要協議上運行。簡單郵件傳輸協議（SMTP）是用於發送電子郵件的Internet標準，大多數出站電子郵件都是使用SMTP發送的。SMTP使用端口25從網絡設備發送電子郵件。</span></p>
 <p id="N106B8" lang=""><span><span>POP3是最常見的個人電子郵件帳戶類型，但是當您檢查電子郵件時，通常會將郵件從服務器中刪除。</span></span></p>
-<p id="N106BB" lang=""><span><span>Internet郵件訪問協議（IMAP）服務器使您可以處理電子郵件，而無需先將其下載到計算機上。</span><span>這允許跨多個設備（包括台式機，筆記本電腦，平板電腦和智能手機）同步（同步）電子郵件。</span><span>IMAP使用端口143接收和同步您的電子郵件。</span><span>使用IMAP的真正好處（尤其是在當今的多設備訪問世界中）是，它可以更改跨多個設備的消息的讀取和刪除狀態。</span><span>例如，如果我在手機上閱讀了一條消息，則當我登錄到桌面時，該消息也將顯示為已被閱讀。</span></span></p><h3>FTP</h3>
+<p id="N106BB" lang=""><span><span>Internet郵件訪問協議（IMAP）服務器使您可以處理電子郵件，而無需先將其下載到計算機上。</span><span>這允許跨多個設備（包括台式機，筆記本電腦，平板電腦和智能手機）同步（同步）電子郵件。</span><span>IMAP使用端口143接收和同步您的電子郵件。</span><span>使用IMAP的真正好處（尤其是在當今的多設備訪問世界中）是，它可以更改跨多個設備的消息的讀取和刪除狀態。</span><span>例如，如果我在手機上閱讀了一條消息，則當我登錄到桌面時，該消息也將顯示為已被閱讀。</span></span></p>
+<h3>FTP</h3>
 <p id="N10690" lang="">In the OSI (Open Systems Interconnection) model, the application layer uses protocols such as trivial file transfer protocol (TFTP), file transfer protocol (FTP), and file transfer protocol secure (FTPS using TLS/SSL) to allow users to migrate data in a client-server model. FTP concerns itself with data only and as such eliminates the overhead of extraneous information such as what HTTP allows in addition to the actual data (advertisements, banners, images, etc.). This alleviates processing and bandwidth overhead and allows the client to simply retrieve the data from the server.</p>
 <p id="N10693" lang="">FTP services can be accessed using client software such as ftp.exe (provided in all Microsoft operating systems), third-party software such as Filezilla or WinSCP, and any modern/current browser. Most light-duty users outside a corporate environment will not use a client FTP (or its secure version) because web browsers can negotiate FTP as well as HTTP. Public FTP servers allow for an anonymous user name so the client can reach file directories specifically designed for public access.</p>
 <p id="N10696" lang="">These network communications are passed through the presentation layer to the session layer, where sockets and sessions are created using logical port numbers as defined by TCP or UDP. TCP is stateful, connection-oriented and reliable. UDP is stateless, connectionless, and less reliable. The combination of source and destination address coupled with the logical port number creates a network socket, which establishes the session for process-to-process communication.<span> </span><em class="italic" lang="">The material in this section is used under CC-BY license from<span> </span></em><a href="https://en.wikipedia.org/wiki/Transport_layer" id="_i_0" lang="" target="_blank">https://en.wikipedia.org/wiki/Transport_layer</a>.</p>
@@ -843,5 +847,31 @@
 <p id="N1074C" lang=""><span><span>Without the passive mode workaround, a third-party FTP client, Mac, or Linux this is as far as you can go. However, in the corporate environment you might be required to troubleshoot FTP on the local intranet, which would most likely be set to active FTP. Clearly, the need for command-line FTP service is fairly limited compared to using a browser.</span></span></p>
 <p lang=""><span><span><span>如果沒有被動模式解決方法，則只能使用第三方FTP客戶端，Mac或Linux。</span><span>但是，在公司環境中，可能需要對本地Intranet上的FTP進行故障排除，這很可能會設置為活動FTP。</span><span>顯然，與使用瀏覽器相比，命令行FTP服務的需求非常有限。</span></span></span></p>
 </div>
-</div><h3>SSL</h3>
+</div>
+<h3>SSL</h3>
+<p id="N10690" lang="">Secure sockets layer (SSL) is a cryptographic protocol designed to secure network communications at the application layer. Netscape developed the original protocol in 1995 and SSL became deprecated and was replaced by transport layer security (TLS) in 2015. For more information about SSL, visit this<span> </span><a href="https://en.wikipedia.org/wiki/Transport_Layer_Security#Secure_Network_Programming" id="_i_0" lang="" target="_blank">website</a>.</p>
+<p id="N10698" lang="">The most common place to see TLS/SSL in action is in your web browser. For example, most all web sites now default from http (port 80) to https (port 443) with TLS. It is a client-server model where the client initiates the request to connect and the server offers the secure protocol.</p>
+<p id="N10690" lang=""><span>安全套接字層（SSL）是一種加密協議，旨在保護應用程序層的網絡通信安全。Netscape在1995年開發了原始協議，並且不贊成使用SSL，並在2015年由傳輸層安全性（TLS）取代。有關SSL的更多信息，請訪問此</span><a href="https://en.wikipedia.org/wiki/Transport_Layer_Security#Secure_Network_Programming" id="_i_0" lang="" target="_blank"><span>網站</span></a><span>。</span></p>
+<p id="N10698" lang=""><span><span>實際使用TLS / SSL的最常見地方是您的Web瀏覽器。</span><span>例如，大多數網站現在默認使用TLS從http（端口80）更改為https（端口443）。</span><span>這是一種客戶端-服務器模型，其中客戶端發起連接請求，服務器提供安全協議。</span></span></p>
+<p lang=""><span><span></span></span></p>
+<p lang=""><span>EXAMPLE</span></p>
+<p id="N1069D" lang="">Try this:</p>
+<ul lang="">
+<li lang="">Type: http://facebook.com or http://google.com into the browser of your choice. Notice the new URL changed to https.</li>
+</ul>
+<ul lang="">
+<li lang="">Next, click on the padlock → connection. If you have an antivirus plug-in you might see the company’s certificate instead in browsers such as Internet Explorer.</li>
+</ul>
+<p id="N1069D" lang=""><span>試試這個：</span></p>
+<ul lang="">
+<li lang=""><span><span>在您選擇的瀏覽器中輸入：http://facebook.com或http://google.com。</span><span>請注意，新的URL更改為https。</span></span></li>
+</ul>
+<ul lang="">
+<li lang=""><span><span>接下來，單擊掛鎖→連接。</span><span>如果您具有防病毒插件，則可能會在Internet Explorer之類的瀏覽器中看到該公司的證書。</span></span></li>
+</ul>
+<div class="imagewrap"><span class="image"><img class="popimg" id="_i_1" onclick="loadImageFromPage(this);" src="https://oli.cmu.edu/repository/webcontent/d826575d0a0001dc3e9f244fa018c560/PCH14/webcontent/PCH14/image11.png"/></span>
+<p id="N106B0" lang="">Image used under CC-BY license from Russell Burchill.</p>
+</div>
+<h1>HW2</h1>
+<h1>HW3</h1>
 <h1>W10</h1>

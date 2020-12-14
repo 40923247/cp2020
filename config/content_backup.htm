@@ -874,12 +874,239 @@
 </div>
 <h1>HW2</h1>
 <h1>HW3</h1>
-<h2>Exercise 28  練習28</h2>
+<h2>Exercise 34 練習34</h2>
+<p></p>
+<p><span>Birthday Json 傑森生日 </span><img class="chili" src="https://www.practicepython.org/assets/img/chili-liz-20x20.png"/><span><span> </span></span><img class="chili" src="https://www.practicepython.org/assets/img/chili-liz-20x20.png"/></p>
+<p></p>
+<p><em>This exercise is Part 2 of 4 of the birthday data exercise series. The other exercises are:<span> </span><a href="https://www.practicepython.org/exercise/2017/01/24/33-birthday-dictionaries.html">Part 1</a>,<span> </span><a href="https://www.practicepython.org/exercise/2017/02/28/35-birthday-months.html">Part 3</a>, and<span> </span><a href="https://www.practicepython.org/exercise/2017/04/02/36-birthday-plots.html">Part 4</a>.</em></p>
+<p>In the<span> </span><a href="https://www.practicepython.org/exercise/2017/01/24/33-birthday-dictionaries.html">previous exercise</a><span> </span>we created a dictionary of famous scientists’ birthdays. In this exercise, modify your program from<span> </span><a href="https://www.practicepython.org/exercise/2017/01/24/33-birthday-dictionaries.html">Part 1</a><span> </span>to load the birthday dictionary from a JSON file on disk, rather than having the dictionary defined in the program.</p>
+<p><strong>Bonus</strong>: Ask the user for another scientist’s name and birthday to add to the dictionary, and update the JSON file you have on disk with the scientist’s name. If you run the program multiple times and keep adding new names, your JSON file should keep getting bigger and bigger.</p>
+<p><em><span>此練習是生日數據練習系列4的第2部分。其他練習是：</span><a href="https://www.practicepython.org/exercise/2017/01/24/33-birthday-dictionaries.html"><span>第1部分</span></a><span>，</span><a href="https://www.practicepython.org/exercise/2017/02/28/35-birthday-months.html"><span>第3</span></a><span></span><a href="https://www.practicepython.org/exercise/2017/04/02/36-birthday-plots.html"><span>部分</span></a><span>和<a href="https://www.practicepython.org/exercise/2017/04/02/36-birthday-plots.html">第4部分</a>。</span></em></p>
+<p><span><span>在上</span></span><a href="https://www.practicepython.org/exercise/2017/01/24/33-birthday-dictionaries.html"><span><span>一個練習中，</span></span></a><span><span>我們創建了著名科學家生日字典。</span><span>在本練習中，請修改</span></span><a href="https://www.practicepython.org/exercise/2017/01/24/33-birthday-dictionaries.html"><span><span>第1部分中</span></span></a><span><span>的程序，</span><span>以從磁盤上的JSON文件加載生日字典，而不是在程序中定義字典。</span></span></p>
+<p><strong><span><span>獎勵</span></span></strong><span><span>：向用戶詢問另一個科學家的名字和生日，以添加到詞典中，並使用科學家的名字更新磁盤上的JSON文件。</span><span>如果您多次運行該程序並繼續添加新名稱，那麼JSON文件應該會越來越大。</span></span></p>
+<p><span><span></span></span></p>
+<p><strong>Discussion 討論區</strong></p>
+<p>In a previous exercise we talked about<span> </span><a href="https://www.practicepython.org/exercise/2014/11/30/21-write-to-a-file.html">how to save information to a .txt file on disk</a>, but in this exercise we are talking about writing a different kind of file format called JSON.</p>
+<p>The JSON file format was developed in the early 2000s as a standard for how web servers would pass data back and forth. It is still used for web server communication today, and it conveniently is also a way we can store dictionary-like data in a file on disk. The JSON format specifies a way to<span> </span><em>serialize</em><span> </span>(turn into a string) a dictionary or list, which then means that string can be written to disk or passed to another application. JSON is meant to store dictionary-like data both in a readable way for humans, and in a compact way that can be read by computers. Because it is a standard format, you can write JSON in one language and read JSON from another language to effectively pass information between the two programs or applications. You can read more about the history of JSON on<span> </span><a href="https://en.wikipedia.org/wiki/JSON">the wikipedia article</a>.</p>
+<p>Here is an example of JSON:</p>
+<p><span>在上一個練習中，我們討論瞭</span><a href="https://www.practicepython.org/exercise/2014/11/30/21-write-to-a-file.html"><span>如何將信息保存到磁盤上的.txt文件中</span></a><span>，但是在本練習中，我們正在討論編寫另一種稱為JSON的文件格式。</span></p>
+<p><span><span>JSON文件格式是在2000年代初期開發的，它是Web服務器如何來回傳遞數據的標準。</span><span>如今，它仍用於Web服務器通信，它也是我們可以將類似字典的數據存儲在磁盤上的文件中的一種便捷方式。</span><span>JSON格式指定了一種對</span><span>字典或列表</span><span>進行</span></span><em><span><span>序列化</span></span></em><span><span>（轉換為字符串）的方式，這意味著可以將字符串寫入磁盤或傳遞給另一個應用程序。</span><span>JSON旨在以人類可讀的方式以及計算機可以讀取的緊湊方式存儲類似字典的數據。</span><span>因為它是一種標準格式，所以您可以用一種語言編寫JSON並從另一種語言讀取JSON，以在兩個程序或應用程序之間有效地傳遞信息。</span><span>您可以在上閱讀有關JSON歷史的更多信息</span></span><a href="https://en.wikipedia.org/wiki/JSON"><span><span>維基百科文章</span></span></a><span><span>。</span></span></p>
+<p><span><span>這是JSON的示例：</span></span></p>
+<pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Michele"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"shirt_color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"blue"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"laptops"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lenovo"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"operating_system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Ubuntu"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nt">"brand"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Apple"</span><span class="p">,</span><span class="w">
+        </span><span class="nt">"operating_system"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OSX"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nt">"has_a_dog"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"items_on_desk"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"mug"</span><span class="p">,</span><span class="w"> </span><span class="s2">"pen"</span><span class="p">,</span><span class="w"> </span><span class="s2">"monitor"</span><span class="p">]</span><span class="w">
+</span><span class="p">}<br/><br/></span></code></pre>
+<p>Notice how you can mix dictionaries and lists. In this example the top-level container is a dictionary, with the keys<span> </span><code class="highlighter-rouge">name</code>,<span> </span><code class="highlighter-rouge">shirt_color</code>,<span> </span><code class="highlighter-rouge">laptops</code>,<span> </span><code class="highlighter-rouge">has_a_dog</code>, and<span> </span><code class="highlighter-rouge">items_on_desk</code>. The keys can be lists, strings, booleans, or other dictionaries. Usually you don’t write JSON by hand (but it is very readable so you easily could). One of my favorite tools to test whether you’ve written valid JSON is this free<span> </span><a href="http://jsonlint.com/">JSON validator</a><span> </span>- just paste your JSON in there and it tells you if it will be read by a program that understands JSON.</p>
+<p>There is a built-in Python library for reading and writing JSON files, so you don’t have to worry about how your dictionaries and lists are going to be turned into the right format!</p>
+<p>As long as the data you want to store is either a dictionary or a list of dictionaries, writing JSON is straightforward. First, import the<span> </span><a href="https://docs.python.org/3/library/json.html"><code class="highlighter-rouge">json</code><span> </span>library</a><span> </span>(no installation needed, it is built in to Python) and initialize some dictionary:</p>
+<p><span>注意如何混合使用字典和列表。在這個例子中頂層容器是一個字典，與鍵</span><code class="highlighter-rouge">name</code><span>，</span><code class="highlighter-rouge">shirt_color</code><span>，</span><code class="highlighter-rouge">laptops</code><span>，</span><code class="highlighter-rouge">has_a_dog</code><span>，和</span><code class="highlighter-rouge">items_on_desk</code><span>。鍵可以是列表，字符串，布爾值或其他字典。通常，您不需要手工編寫JSON（但它具有很高的可讀性，因此您可以輕鬆編寫）。這個免費的</span><a href="http://jsonlint.com/"><span>JSON驗證程序</span></a><span>是我最喜歡的測試您是否已編寫有效JSON的<a href="http://jsonlint.com/">工具之一</a>-只需將JSON粘貼在其中，它就會告訴您是否會由理解JSON的程序讀取它。</span></p>
+<p><span><span>有一個內置的Python庫用於讀寫JSON文件，因此您不必擔心字典和列表將如何轉換為正確的格式！</span></span></p>
+<p><span><span>只要您要存儲的數據是字典還是詞典列表，編寫JSON就很簡單。</span><span>首先，導入</span></span><a href="https://docs.python.org/3/library/json.html"><code class="highlighter-rouge">json</code><span><span>庫</span></span></a><span><span>（無需安裝，它內置在Python中）並初始化一些字典：</span></span></p>
+<p><span><span></span></span></p>
+<pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="n">info_about_me</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">"name"</span><span class="p">:</span> <span class="s">"Michele"</span><span class="p">,</span>
+    <span class="s">"has_a_dog"</span><span class="p">:</span> <span class="bp">False</span>
+<span class="p">}<br/><br/><span>Then, to save your dictionary to disk you need to open a file and use the </span><code class="highlighter-rouge">json.dump()</code><span><span> </span>method. <br/>Remember to use the<span> </span></span><code class="highlighter-rouge">w</code><span><span> </span>flag when opening a file for writing:<br/>然後，要將字典保存到磁盤，您需要打開一個文件並使用該<code class="highlighter-rouge">json.dump()</code><span><span>方法。</span></span><code class="highlighter-rouge">w</code><span><span>打開文件進行寫入時，</span><span>請記住使用<br/>該</span><span>標誌：<br/><br/></span></span></span></span></code></pre>
+<pre><code class="language-python" data-lang="python"><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">"info.json"</span><span class="p">,</span> <span class="s">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">info_about_me</span><span class="p">,</span> <span class="n">f</span><span class="p">)<br/><br/><span>And you will have saved a file called </span><code class="highlighter-rouge">info.json</code><span><span> </span>in the same directory as your Python program.<br/> The dictionary<span> </span></span><code class="highlighter-rouge">info_about_me</code><span><span> </span>will be saved to disk, but the variable name will not be. <br/>Basically, JSON won’t remember the name of the variable you saved your dictionary in. <br/>If you open the file with a text editor (Notepad++, vim, emacs, Sublime Text, etc.), you <br/>will just see:<br/>您將<code class="highlighter-rouge">info.json</code><span><span>在與Python程序相同的目錄中</span><span>保存一個名為的文件</span><span>。</span><span>詞典</span></span><code class="highlighter-rouge">info_about_me</code><span><span>將保存到磁盤，但變量名<br/>不會。</span><span>基本上，JSON不會記住保存字典的變量的名稱。如果使用文本編輯器（Notepad ++，vim，emacs，Sublime Text等）<br/>打開文件，則只會看到：<br/><br/></span></span></span></span></code></pre>
+<pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Michele"</span><span class="p">,</span><span class="w">
+    </span><span class="nt">"has_a_dog"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span><span class="p">}<br/><br/></span></code></pre>
+<p>Alternatively, you can also manually create a JSON file and type JSON directly into it (passing it through<span> </span><a href="http://jsonlint.com/">the JSON validator</a><span> </span>of course!). Just save the file with the<span> </span><code class="highlighter-rouge">.json</code><span> </span>extension and copy the dictionary directly into the file.</p>
+<p>Now I can use the information about me that I saved to disk in another program (written in a completely different file) to do something like printing a message. When I saved the JSON file, the variable name of my dictionary was not saved with it, so when I load the JSON file I need to save it into a variable. I can use the same<span> </span><code class="highlighter-rouge">json</code><span> </span>library to do this:</p>
+<p><span>另外，您也可以手動創建一個JSON文件，然後直接在其中鍵入JSON（當然，還要通過</span><a href="http://jsonlint.com/"><span>JSON驗證器</span></a><span>！）。只需保存帶有</span><code class="highlighter-rouge">.json</code><span>擴展名的文件，然後將字典直接複製到文件中即可。</span></p>
+<p><span><span>現在，我可以使用保存在另一個程序中的有關我的信息（以完全不同的文件編寫）來執行類似打印消息的操作。</span><span>當我保存JSON文件時，字典的變量名並未隨之保存，因此，當我加載JSON文件時，需要將其保存到變量中。</span><span>我可以使用相同的</span></span><code class="highlighter-rouge">json</code><span><span>庫來執行此操作：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">json</span><span></span>
+<span></span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">"info.json"</span><span class="p">,</span> <span class="s">"r"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">info</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span></span>
+<span></span>
+<span class="k">if</span> <span class="n">info</span><span class="p">[</span><span class="s">"has_a_dog"</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"{} has a dog"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="s">"name"</span><span class="p">]))</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"{} does not have a dog"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">info</span><span class="p">[</span><span class="s">"name"</span><span class="p">]))<br/><br/><span>When this program runs, the output should be:</span><br/></span></code></pre>
+<pre><code class="language-python" data-lang="python"><span class="p"><span>運行該程序時，輸出應為：</span><br/></span></code></pre>
+<pre><code class="language-text" data-lang="text">Michele does not have a dog<br/><br/></code></pre>
+<p>Notice how when I loaded the JSON file I used a different name than when I saved it - this is because the variable names don’t get saved together with the JSON data, so you do not have to use the same variable names to save and load JSON.</p>
+<p>Now that you know about JSON, you can use it to do a number of things:</p>
+<ul>
+<li>Save data to disk that can be shared by people and programs.</li>
+<li>Constantly update data that needs to be shared by re-saving and re-load to disk.</li>
+<li>Save data from a program that a human can read and manually check and fix errors.</li>
+</ul>
+<p><span>請注意，加載JSON文件時使用的名稱與保存時使用的名稱不同-這是因為變量名稱不會與JSON數據一起保存，因此您不必使用相同的變量名稱進行保存和加載JSON。</span></p>
+<p><span><span>現在，您已經了解了JSON，可以使用它來做很多事情：</span></span></p>
+<ul>
+<li><span><span>將數據保存到可以由人員和程序共享的磁盤。</span></span></li>
+<li><span><span>不斷更新需要通過重新保存並重新加載到磁盤的數據。</span></span></li>
+<li><span><span>保存人類可以讀取的程序中的數據，並手動檢查和修復錯誤。</span></span></li>
+</ul>
+<pre><code class="language-text" data-lang="text"></code></pre>
+<pre><code class="language-python" data-lang="python"><span class="p"></span></code></pre>
+</figure>
+<pre><code class="language-json" data-lang="json"><span class="p"></span></code></pre>
+<pre><code class="language-python" data-lang="python"><span class="p"><span><span><span></span></span></span></span></code></pre>
+<pre><code class="language-python" data-lang="python"><span class="p"><span><span><span></span></span></span><br/></span></code></pre>
+<pre><code class="language-json" data-lang="json"><span class="p"></span></code></pre>
+<p><strong></strong></p>
+<p></p><h2>Exercise 24  練習24</h2>
+<p></p>
+<p><span><strong>Draw A Game Board</strong> </span><img class="chili" src="https://www.practicepython.org/assets/img/chili-liz-20x20.png"/><span><span> </span></span><img class="chili" src="https://www.practicepython.org/assets/img/chili-liz-20x20.png"/></p>
+<p><strong>畫遊戲板 </strong></p>
+<p><em>This exercise is Part 1 of 4 of the Tic Tac Toe exercise series. The other exercises are:<span> </span><a href="https://www.practicepython.org/exercise/2015/11/16/26-check-tic-tac-toe.html">Part 2</a>,<span> </span><a href="https://www.practicepython.org/exercise/2015/11/26/27-tic-tac-toe-draw.html">Part 3</a>, and<span> </span><a href="https://www.practicepython.org/exercise/2016/08/03/29-tic-tac-toe-game.html">Part 4</a>.</em></p>
+<p>Time for some fake graphics! Let’s say we want to draw game boards that look like this:</p>
+<p><em><span>此練習是Tic Tac Toe練習系列4的第1部分。其他練習是：</span><a href="https://www.practicepython.org/exercise/2015/11/16/26-check-tic-tac-toe.html"><span>第2部分</span></a><span>，</span><a href="https://www.practicepython.org/exercise/2015/11/26/27-tic-tac-toe-draw.html"><span>第3</span></a><span></span><a href="https://www.practicepython.org/exercise/2016/08/03/29-tic-tac-toe-game.html"><span>部分</span></a><span>和<a href="https://www.practicepython.org/exercise/2016/08/03/29-tic-tac-toe-game.html">第4部分</a>。</span></em></p>
+<p><span><span>是時候購買一些假圖形了！</span><span>假設我們要繪製如下游戲板：</span></span></p>
+<pre><code class="language-python" data-lang="python"> <span class="o">---</span> <span class="o">---</span> <span class="o">---</span> 
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span> 
+ <span class="o">---</span> <span class="o">---</span> <span class="o">---</span>  
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span> 
+ <span class="o">---</span> <span class="o">---</span> <span class="o">---</span>  
+<span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span>   <span class="o">|</span> 
+ <span class="o">---</span> <span class="o">---</span> <span class="o">---</span> <br/><br/></code></pre>
+<p>This one is 3x3 (like in tic tac toe). Obviously, they come in many other sizes (8x8 for chess, 19x19 for Go, and many more).</p>
+<p>Ask the user what size game board they want to draw, and draw it for them to the screen using Python’s<span> </span><code class="highlighter-rouge">print</code><span> </span>statement.</p>
+<p>Remember that in Python 3, printing to the screen is accomplished by</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">print</span><span class="p">(</span><span class="s">"Thing to show on screen"</span><span class="p">)</span></code></pre>
+</figure>
+<p><em>Hint: this requires some use of functions, as were discussed<span> </span><a href="https://www.practicepython.org/exercise/2014/04/16/11-check-primality-functions.html">previously on this blog</a><span> </span>and<span> </span><a href="http://www.tutorialspoint.com/python/python_functions.htm">elsewhere on the Internet, like this TutorialsPoint link</a>.</em></p>
+<p><span>這是3x3（就像井字遊戲一樣）。顯然，它們有許多其他尺寸（國際象棋為8x8，圍棋為19x19等）。</span></p>
+<p><span><span>詢問用戶他們要繪製什麼尺寸的遊戲板，並使用Python的</span></span><code class="highlighter-rouge">print</code><span><span>語句</span><span>將其繪製到屏幕上</span><span>。</span></span></p>
+<p><span><span>請記住，在Python 3中，打印到屏幕是通過以下方式完成的：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">print</span><span class="p">(</span><span class="s">"Thing to show on screen"</span><span class="p">)</span></code></pre>
+</figure>
+<p><em><span><span>提示：這需要某種功能的使用，如</span></span><a href="https://www.practicepython.org/exercise/2014/04/16/11-check-primality-functions.html"><span><span>本博客之前</span></span></a><span><span>和</span></span><a href="http://www.tutorialspoint.com/python/python_functions.htm"><span><span>Internet上其他地方所討論的，例如TutorialsPoint鏈接</span></span></a><span><span>。</span></span></em></p>
+<p><em><span><span></span></span></em></p>
+<p id="topics-and-links-for-more-information"><strong>Topics and links for more information</strong></p>
+<p id="topics-and-links-for-more-information"><strong>主題和鏈接，以獲取更多信息</strong></p>
+<p>The main topic of this exercise is functions. They are tricky, and deserve lots of practice and thought. Here are a few links in case you want some more reading.</p>
+<ol>
+<li><a href="http://www.tutorialspoint.com/python/python_functions.htm">Functions on TutorialsPoint</a></li>
+<li><a href="http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/functions.html">Hands-on Python, by Loyola University</a></li>
+<li><a href="http://learnpythonthehardway.org/book/ex21.html">Learn Python the Hard Way</a></li>
+<li><a href="http://zetcode.com/lang/python/functions/">ZetCode</a></li>
+</ol>
+<p>There are hundreds more out there - read and practice away!</p>
+<p><span>本練習的主要主題是功能。它們很棘手，值得大量實踐和思考。這裡有一些鏈接，以備您需要更多閱讀。</span></p>
+<ol>
+<li><a href="http://www.tutorialspoint.com/python/python_functions.htm"><span><span>TutorialsPoint上的功能</span></span></a></li>
+<li><a href="http://anh.cs.luc.edu/python/hands-on/3.1/handsonHtml/functions.html"><span><span>Loyola University的動手Python</span></span></a></li>
+<li><a href="http://learnpythonthehardway.org/book/ex21.html"><span><span>艱苦學習Python</span></span></a></li>
+<li><a href="http://zetcode.com/lang/python/functions/"><span><span>郵遞區號</span></span></a></li>
+</ol>
+<p><span><span>那裡還有數百個-閱讀和練習吧！</span></span></p>
+<p><span><span></span></span></p>
+<p><strong>Solutions 解決方案</strong></p>
+<p id="sample-solution"><strong>Sample solution</strong></p>
+<p>Let’s break this task into pieces and use Python 3.</p>
+<p>First, the user needs to a numbers that represent the size of the game board (assuming the game board will be n by n). (<em>Bonus exercise: extend the following code to make the game board not square.</em>). The following snippet assumes that the person entered a number and doesn’t do any kind of error checking - for now, that’s OK.</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">board_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"What size of game board? "</span><span class="p">))</span></code></pre>
+</figure>
+<p>Then, we need to draw each row of the game board. Each row consists of horizontal pieces (<code class="highlighter-rouge">---</code>) and vertical pieces (<code class="highlighter-rouge">|</code>). Each of these shows up in a pattern, so we can rely on for loops to help with the rendering.</p>
+<p>To print a single row, we want to do something like this:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">print</span><span class="p">(</span><span class="s">" --- "</span> <span class="o">*</span> <span class="n">board_size</span><span class="p">)</span></code></pre>
+</figure>
+<p>To print the vertical parts of the row, we want something like this, because we don’t care about trailing whitespace, and because we want one more vertical line than the size of the board:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">print</span><span class="p">(</span><span class="s">"|   "</span> <span class="o">*</span> <span class="p">(</span><span class="n">board_size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span></code></pre>
+</figure>
+<p>For a board of size<span> </span><em>board_size</em><span> </span>we want to print that many horizontal pieces and vertical pieces, plus an extra horizontal piece for the bottom. Let’s use functions for this entire operation, since we might want to change the style on the game boards for later use. All together, the program will look like this:</p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">def</span> <span class="nf">print_horiz_line</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">" --- "</span> <span class="o">*</span> <span class="n">board_size</span><span class="p">)</span>
+
+  <span class="k">def</span> <span class="nf">print_vert_line</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"|   "</span> <span class="o">*</span> <span class="p">(</span><span class="n">board_size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span>
+
+  <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">board_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"What size of game board? "</span><span class="p">))</span>
+
+    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">board_size</span><span class="p">):</span>
+      <span class="n">print_horiz_line</span><span class="p">()</span>
+      <span class="n">print_vert_line</span><span class="p">()</span>
+    <span class="k">print</span> <span class="n">horiz_line</span><span class="p">()</span></code></pre>
+</figure>
+<p>This way, if we ever decide to change the design of the game board by making it bigger, it will be easy to do! All we need to do is change the<span> </span><code class="highlighter-rouge">print_horiz_line()</code><span> </span>and<span> </span><code class="highlighter-rouge">print_vert_line()</code><span> </span>functions, and we’re all set!</p>
+<p>範例解答</p>
+<p><span>讓我們將這項任務分解成幾個部分並使用Python 3。</span></p>
+<p><span><span>首先，用戶需要一個代表遊戲板尺寸的數字（假設遊戲板為n×n）。</span><span>（</span></span><em><span><span>額外的練習：擴展以下代碼以使遊戲板不方形。</span></span></em><span><span>）。</span><span>以下代碼段假定此人輸入了一個數字，並且沒有進行任何類型的錯誤檢查-暫時可以。</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="n">board_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"What size of game board? "</span><span class="p">))</span></code></pre>
+</figure>
+<p><span><span>然後，我們需要繪製遊戲板的每一行。</span><span>每行由水平部分（</span></span><code class="highlighter-rouge">---</code><span><span>）和垂直部分（</span></span><code class="highlighter-rouge">|</code><span><span>）組成。</span><span>每一個都以一種模式顯示，因此我們可以依靠for循環來幫助進行渲染。</span></span></p>
+<p><span><span>要打印一行，我們想做這樣的事情：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">print</span><span class="p">(</span><span class="s">" --- "</span> <span class="o">*</span> <span class="n">board_size</span><span class="p">)</span></code></pre>
+</figure>
+<p><span><span>要打印行的垂直部分，我們需要這樣的東西，因為我們不在乎尾隨空格，並且因為我們想要的垂直線比板子的尺寸還要多：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">print</span><span class="p">(</span><span class="s">"|   "</span> <span class="o">*</span> <span class="p">(</span><span class="n">board_size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span></code></pre>
+</figure>
+<p><span><span>對於大小為</span></span><em><span><span>board_size</span></span></em><span><span>的板子，</span><span>我們要打印許多水平件和垂直件，並在底部再增加一個水平件。</span><span>讓我們在整個操作過程中使用函數，因為我們可能想更改遊戲板上的樣式以備後用。</span><span>總之，該程序將如下所示：</span></span></p>
+<figure class="highlight">
+<pre><code class="language-python" data-lang="python">  <span class="k">def</span> <span class="nf">print_horiz_line</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">" --- "</span> <span class="o">*</span> <span class="n">board_size</span><span class="p">)</span><span></span>
+<span></span>
+  <span class="k">def</span> <span class="nf">print_vert_line</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"|   "</span> <span class="o">*</span> <span class="p">(</span><span class="n">board_size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span><span></span>
+<span></span>
+  <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">board_size</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"What size of game board? "</span><span class="p">))</span><span></span>
+<span></span>
+    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">board_size</span><span class="p">):</span>
+      <span class="n">print_horiz_line</span><span class="p">()</span>
+      <span class="n">print_vert_line</span><span class="p">()</span>
+    <span class="k">print</span> <span class="n">horiz_line</span><span class="p">()</span></code></pre>
+</figure>
+<p><span><span>這樣，如果我們決定通過擴大遊戲板的設計來改變它的設計，那將很容易做到！</span><span>我們需要做的就是更改</span></span><code class="highlighter-rouge">print_horiz_line()</code><span><span>和</span></span><code class="highlighter-rouge">print_vert_line()</code><span><span>功能，並且一切就緒！</span></span></p>
+<p><span><span></span></span></p>
+<p id="a-few-user-solutions-not-using-functions"><strong>A few user solutions not using functions</strong></p>
+<p id="a-few-user-solutions-not-using-functions"><strong>一些不使用功能的用戶解決方案</strong></p>
+<p>This one is pretty simple, and it is specific to the 3x3 board above. There is no way to change the size. Additionally, writing out the <code class="highlighter-rouge">a</code> and <code class="highlighter-rouge">b</code> lists in the print statement are tedious and can be improved with a list comprehension or for loop.</p>
+<p>這很簡單，它特定於上面的3x3板。無法更改大小。此外，在打印語句中寫出<code class="highlighter-rouge">a</code>and<code class="highlighter-rouge">b</code>列表很繁瑣，可以通過列表理解或for循環加以改進。</p>
+<pre>a = '---'.join('    ')
+b = '   '.join('||||')
+print('\n'.join((a, b, a, b, a, b, a)))<br/><br/><span>The author chose to use a </span><code class="highlighter-rouge">while</code><span><span> </span>loop instead of a<span> </span></span><code class="highlighter-rouge">for</code><span><span> </span>loop to do the printing, which <br/>was an interesting choice. But it works!<br/>作者選擇使用<code class="highlighter-rouge">while</code><span><span>循環而不是</span></span><code class="highlighter-rouge">for</code><span><span>循環進行打印，這是一個有趣的選擇。</span><span>但這有效！</span></span><br/><br/></span></pre>
+<pre>def drawboard(kamal):
+    kamal = int(kamal)
+    i = 0
+    ho = "--- "
+    ve = "|   "
+    ho = ho * kamal
+    ve = ve * (kamal+1)
+    while i &lt; kamal+1:
+        print ho
+        if not (i == kamal):
+            print ve
+        i += 1
+</pre>
+<pre><span></span></pre>
+<pre><code class="language-python" data-lang="python"></code></pre><h2>Exercise 28  練習28</h2>
 <p>Implement a function that takes as input three variables, and returns the largest of the three. Do this without using the Python max() function!</p>
 <p>The goal of this exercise is to think about some internals that Python normally takes care of for us. All you need is some variables and if statements!</p>
 <p><br/>實現一個函數，將三個變量作為輸入，並返回三個變量中的最大值。 無需使用Python max（）函數即可執行此操作！</p>
 <p>本練習的目的是考慮Python通常為我們處理的一些內部組件。 您只需要一些變量和if語句！</p>
-<h3>solution 解決方案</h3>
+<p>solution 解決方案</p>
 <p>Sample solutions</p>
 <p>There are many ways to answer this question, ranging from simple to complex. Here are a few reader-submitted answers!</p>
 <p>This first example solution uses a series of if statements and comparisons to find the largest of 3 elements.</p>

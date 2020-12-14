@@ -122,7 +122,7 @@ img.add_border {
                             <li><a href="./../blog/index.html">blog</a></li>
                         </ul>
                       </li>
-                     <li><a href='首頁.html'>首頁</a><li class='has-children'><a href='HW1.html'>HW1</a><ul class='dropdown'><li class='has-children'><a href='U13.html'>U13</a><ul class='dropdown'><li><a href='IPv4 and IPv6 Addresses.html'>IPv4 and IPv6 Addresses</a><li><a href='IPv4 Addressing.html'>IPv4 Addressing</a><li><a href='IPv4 Address Classes.html'>IPv4 Address Classes</a><li><a href='Assigning an IP Address 分配IP地址.html'>Assigning an IP Address 分配IP地址</a><li><a href='IPv6.html'>IPv6</a><li><a href='Classful Vs  Classless Addressing  Subnet and CIDR.html'>Classful Vs  Classless Addressing  Subnet and CIDR</a><li><a href='Windows Networking Windows網絡.html'>Windows Networking Windows網絡</a></li></ul><li class='has-children'><a href='U14.html'>U14</a><ul class='dropdown'><li><a href='Overview 概述.html'>Overview 概述</a><li><a href='TCP and UDP.html'>TCP and UDP</a><li><a href='TCP IP Stack.html'>TCP IP Stack</a><li><a href='Networking Transfer Protocols 網絡傳輸協議.html'>Networking Transfer Protocols 網絡傳輸協議</a><li><a href='FTP.html'>FTP</a><li><a href='SSL.html'>SSL</a></li></li></ul></ul><li><a href='HW2.html'>HW2</a><li><a href='HW3.html'>HW3</a><li><a href='W10.html'>W10</a></li>
+                     <li><a href='首頁.html'>首頁</a><li class='has-children'><a href='HW1.html'>HW1</a><ul class='dropdown'><li class='has-children'><a href='U13.html'>U13</a><ul class='dropdown'><li><a href='IPv4 and IPv6 Addresses.html'>IPv4 and IPv6 Addresses</a><li><a href='IPv4 Addressing.html'>IPv4 Addressing</a><li><a href='IPv4 Address Classes.html'>IPv4 Address Classes</a><li><a href='Assigning an IP Address 分配IP地址.html'>Assigning an IP Address 分配IP地址</a><li><a href='IPv6.html'>IPv6</a><li><a href='Classful Vs  Classless Addressing  Subnet and CIDR.html'>Classful Vs  Classless Addressing  Subnet and CIDR</a><li><a href='Windows Networking Windows網絡.html'>Windows Networking Windows網絡</a></li></ul><li class='has-children'><a href='U14.html'>U14</a><ul class='dropdown'><li><a href='Overview 概述.html'>Overview 概述</a><li><a href='TCP and UDP.html'>TCP and UDP</a><li><a href='TCP IP Stack.html'>TCP IP Stack</a><li><a href='Networking Transfer Protocols 網絡傳輸協議.html'>Networking Transfer Protocols 網絡傳輸協議</a><li><a href='FTP.html'>FTP</a><li><a href='SSL.html'>SSL</a></li></li></ul></ul><li><a href='HW2.html'>HW2</a><li class='has-children'><a href='HW3.html'>HW3</a><ul class='dropdown'><li><a href='Exercise 28  練習28.html'>Exercise 28  練習28</a></li>
                       </ul>
                 </nav>
               </div>
@@ -133,7 +133,51 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">HW3 << <a href='HW3.html'>Previous</a> <br /><h1>W10</h1><br />HW3 << <a href='HW3.html'>Previous</a> </div>
+    <div id="tipue_search_content">HW3 << <a href='HW3.html'>Previous</a> <br /><h1>Exercise 28  練習28</h1>
+<p>Implement a function that takes as input three variables, and returns the largest of the three. Do this without using the Python max() function!</p>
+<p>The goal of this exercise is to think about some internals that Python normally takes care of for us. All you need is some variables and if statements!</p>
+<p><br/>實現一個函數，將三個變量作為輸入，並返回三個變量中的最大值。 無需使用Python max（）函數即可執行此操作！</p>
+<p>本練習的目的是考慮Python通常為我們處理的一些內部組件。 您只需要一些變量和if語句！</p>
+<p>solution 解決方案</p>
+<p>Sample solutions</p>
+<p>There are many ways to answer this question, ranging from simple to complex. Here are a few reader-submitted answers!</p>
+<p>This first example solution uses a series of if statements and comparisons to find the largest of 3 elements.</p>
+<p>有許多方法可以回答此問題，從簡單到復雜。 這是讀者提交的一些答案！</p>
+<p>第一個示例解決方案使用一系列if語句和比較來查找3個元素中的最大元素。</p>
+<pre>def max_of_three(a,b,c):
+     max_3=0
+     if a&gt;b:
+         #max_3=a
+         if a&gt;c:
+             max_3=c
+         else:
+             max_3=a
+     else:
+          if b&gt;c:
+             max_3=b
+          else:
+             max_3=c
+     return max_3<br/><br/>Another solution is a little bit less verbose, taking 3 numbers as an input, making them into<br/> a list, sorting them, and then reading off the largest element.<br/>This last solution uses a more compact series of if statement comparisons to cover all cases <br/>of 3 elements.<br/>另一個解決方案是稍微冗長一些，將3個數字作為輸入，將它們放入列表，對它們進行排序，然後讀取最大的元素。<br/><br/>最後一個解決方案使用一系列更緊湊的if語句比較來涵蓋3個元素的所有情況。</pre>
+<pre>#!/usr/bin/env python
+import sys
+
+if len(sys.argv) &lt; 4:
+    print 'Usage &lt;value1&gt; &lt;value2&gt; &lt;value3&gt;'
+    sys.exit ( 1 )
+    
+arg1 = sys.argv[1]
+arg2 = sys.argv[2]
+arg3 = sys.argv[3]
+def maxfunction(a,b,c):
+	if (a &gt; b) and (a &gt; c):
+	    print 'Max value is :',a
+        elif (b &gt; a) and (b &gt; c):
+            print 'Max value is :',b
+        elif (c &gt; a) and (c &gt; b):
+            print 'Max value is :',c
+            
+maxfunction(arg1,arg2,arg3)</pre>
+<p></p><br />HW3 << <a href='HW3.html'>Previous</a> </div>
         
     <!-- footer -->
       <div class="container">
